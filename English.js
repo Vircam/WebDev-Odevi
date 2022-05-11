@@ -570,3 +570,465 @@ function practice19(id){
         }
     }
 }
+
+function practice21(id){
+    var select1 = document.getElementById("2-1-1")
+    var value1 = select1.options[select1.selectedIndex].value;
+    var select2 = document.getElementById("2-1-2")
+    var value2 = select2.options[select2.selectedIndex].value;
+    var select3 = document.getElementById("2-1-3")
+    var value3 = select3.options[select3.selectedIndex].value;
+    var select4 = document.getElementById("2-1-4")
+    var value4 = select4.options[select4.selectedIndex].value;
+    var select5 = document.getElementById("2-1-5")
+    var value5 = select5.options[select5.selectedIndex].value;
+    var select6 = document.getElementById("2-1-6")
+    var value6 = select6.options[select6.selectedIndex].value;
+    var select7 = document.getElementById("2-1-7")
+    var value7 = select7.options[select7.selectedIndex].value;
+    var select8 = document.getElementById("2-1-8")
+    var value8 = select8.options[select8.selectedIndex].value;
+    var select9 = document.getElementById("2-1-9")
+    var value9 = select9.options[select9.selectedIndex].value;
+    
+    if (id == "2-1-1")
+    {
+        if (value1 == "Britain"){
+            document.getElementById("trueFalse211").innerHTML = "Correct";
+            document.getElementById("trueFalse211").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse211").innerHTML = "Incorrect";
+            document.getElementById("trueFalse211").style.color = "red";
+        }
+    }
+
+    if (id == "2-1-2")
+    {
+        if (value2 == "Germany"){
+            document.getElementById("trueFalse212").innerHTML = "Correct";
+            document.getElementById("trueFalse212").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse212").innerHTML = "Incorrect";
+            document.getElementById("trueFalse212").style.color = "red";
+        }
+    }
+
+    if (id == "2-1-3")
+    {
+        if (value3 == "Iran"){
+            document.getElementById("trueFalse213").innerHTML = "Correct";
+            document.getElementById("trueFalse213").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse213").innerHTML = "Incorrect";
+            document.getElementById("trueFalse213").style.color = "red";
+        }
+    }
+
+    if (id == "2-1-4")
+    {
+        if (value4 == "Iraq"){
+            document.getElementById("trueFalse214").innerHTML = "Correct";
+            document.getElementById("trueFalse214").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse214").innerHTML = "Incorrect";
+            document.getElementById("trueFalse214").style.color = "red";
+        }
+    }
+
+    if (id == "2-1-5")
+    {
+        if (value5 == "Japan"){
+            document.getElementById("trueFalse215").innerHTML = "Correct";
+            document.getElementById("trueFalse215").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse215").innerHTML = "Incorrect";
+            document.getElementById("trueFalse215").style.color = "red";
+        }
+    }
+
+    if (id == "2-1-6")
+    {
+        if (value6 == "Pakistan"){
+            document.getElementById("trueFalse216").innerHTML = "Correct";
+            document.getElementById("trueFalse216").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse216").innerHTML = "Incorrect";
+            document.getElementById("trueFalse216").style.color = "red";
+        }
+    }
+
+    if (id == "2-1-7")
+    {
+        if (value7 == "Russia"){
+            document.getElementById("trueFalse217").innerHTML = "Correct";
+            document.getElementById("trueFalse217").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse217").innerHTML = "Incorrect";
+            document.getElementById("trueFalse217").style.color = "red";
+        }
+    }
+
+    if (id == "2-1-8")
+    {
+        if (value8 == "Turkey"){
+            document.getElementById("trueFalse218").innerHTML = "Correct";
+            document.getElementById("trueFalse218").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse218").innerHTML = "Incorrect";
+            document.getElementById("trueFalse218").style.color = "red";
+        }
+    }
+
+    if (id == "2-1-9")
+    {
+        if (value9 == "USA"){
+            document.getElementById("trueFalse219").innerHTML = "Correct";
+            document.getElementById("trueFalse219").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse219").innerHTML = "Incorrect";
+            document.getElementById("trueFalse219").style.color = "red";
+        }
+    }
+}
+
+function practice22(id){
+    var select1 = document.getElementById("2-2-1")
+    var value1 = select1.options[select1.selectedIndex].value;
+    var select2 = document.getElementById("2-2-2")
+    var value2 = select2.options[select2.selectedIndex].value;
+    var select3 = document.getElementById("2-2-3")
+    var value3 = select3.options[select3.selectedIndex].value;
+    var select4 = document.getElementById("2-2-4")
+    var value4 = select4.options[select4.selectedIndex].value;
+    
+    if (id == "2-2-1")
+    {
+        if (value1 == "name"){
+            document.getElementById("trueFalse221").innerHTML = "Correct";
+            document.getElementById("trueFalse221").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse221").innerHTML = "Incorrect";
+            document.getElementById("trueFalse221").style.color = "red";
+        }
+    }
+
+    if (id == "2-2-2")
+    {
+        if (value2 == "age"){
+            document.getElementById("trueFalse222").innerHTML = "Correct";
+            document.getElementById("trueFalse222").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse222").innerHTML = "Incorrect";
+            document.getElementById("trueFalse222").style.color = "red";
+        }
+    }
+
+    if (id == "2-2-3")
+    {
+        if (value3 == "country"){
+            document.getElementById("trueFalse223").innerHTML = "Correct";
+            document.getElementById("trueFalse223").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse223").innerHTML = "Incorrect";
+            document.getElementById("trueFalse223").style.color = "red";
+        }
+    }
+
+    if (id == "2-2-4")
+    {
+        if (value4 == "nationality"){
+            document.getElementById("trueFalse224").innerHTML = "Correct";
+            document.getElementById("trueFalse224").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse224").innerHTML = "Incorrect";
+            document.getElementById("trueFalse224").style.color = "red";
+        }
+    }
+}
+
+function practice24(id){
+    var value1 = document.getElementById("2-4-1").value;
+    var value2 = document.getElementById("2-4-2").value;
+    var value3 = document.getElementById("2-4-3").value;
+    var value4 = document.getElementById("2-4-4").value;
+    
+    if (id == "2-4-1")
+    {
+        if (value1 == "I"){
+            document.getElementById("trueFalse241").innerHTML = "Correct";
+            document.getElementById("trueFalse241").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse241").innerHTML = "Incorrect";
+            document.getElementById("trueFalse241").style.color = "red";
+        }
+    }
+
+    if (id == "2-4-2")
+    {
+        if (value2 == "LOVE"){
+            document.getElementById("trueFalse242").innerHTML = "Correct";
+            document.getElementById("trueFalse242").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse242").innerHTML = "Incorrect";
+            document.getElementById("trueFalse242").style.color = "red";
+        }
+    }
+
+    if (id == "2-4-3")
+    {
+        if (value3 == "MY"){
+            document.getElementById("trueFalse243").innerHTML = "Correct";
+            document.getElementById("trueFalse243").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse243").innerHTML = "Incorrect";
+            document.getElementById("trueFalse243").style.color = "red";
+        }
+    }
+
+    if (id == "2-4-4")
+    {
+        if (value4 == "COUNTRY"){
+            document.getElementById("trueFalse244").innerHTML = "Correct";
+            document.getElementById("trueFalse244").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse244").innerHTML = "Incorrect";
+            document.getElementById("trueFalse244").style.color = "red";
+        }
+    }
+}
+
+function practice25(id){
+    var select1 = document.getElementById("2-5-1")
+    var value1 = select1.options[select1.selectedIndex].value;
+    var select2 = document.getElementById("2-5-2")
+    var value2 = select2.options[select2.selectedIndex].value;
+    var select3 = document.getElementById("2-5-3")
+    var value3 = select3.options[select3.selectedIndex].value;
+    var select4 = document.getElementById("2-5-4")
+    var value4 = select4.options[select4.selectedIndex].value;
+    var select5 = document.getElementById("2-5-5")
+    var value5 = select5.options[select5.selectedIndex].value;
+
+    if (id == "2-5-1")
+    {
+        if (value1 == "north"){
+            document.getElementById("trueFalse251").innerHTML = "Correct";
+            document.getElementById("trueFalse251").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse251").innerHTML = "Incorrect";
+            document.getElementById("trueFalse251").style.color = "red";
+        }
+    }
+
+    if (id == "2-5-2")
+    {
+        if (value2 == "south"){
+            document.getElementById("trueFalse252").innerHTML = "Correct";
+            document.getElementById("trueFalse252").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse252").innerHTML = "Incorrect";
+            document.getElementById("trueFalse252").style.color = "red";
+        }
+    }
+
+    if (id == "2-5-3")
+    {
+        if (value3 == "west"){
+            document.getElementById("trueFalse253").innerHTML = "Correct";
+            document.getElementById("trueFalse253").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse253").innerHTML = "Incorrect";
+            document.getElementById("trueFalse253").style.color = "red";
+        }
+    }
+
+    if (id == "2-5-4")
+    {
+        if (value4 == "west"){
+            document.getElementById("trueFalse254").innerHTML = "Correct";
+            document.getElementById("trueFalse254").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse254").innerHTML = "Incorrect";
+            document.getElementById("trueFalse254").style.color = "red";
+        }
+    }
+
+    if (id == "2-5-5")
+    {
+        if (value5 == "south"){
+            document.getElementById("trueFalse255").innerHTML = "Correct";
+            document.getElementById("trueFalse255").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse255").innerHTML = "Incorrect";
+            document.getElementById("trueFalse255").style.color = "red";
+        }
+    }   
+}
+
+function practice26(id){
+    var select1 = document.getElementById("2-6-1")
+    var value1 = select1.options[select1.selectedIndex].value;
+    var select2 = document.getElementById("2-6-2")
+    var value2 = select2.options[select2.selectedIndex].value;
+    var select3 = document.getElementById("2-6-3")
+    var value3 = select3.options[select3.selectedIndex].value;
+    var select4 = document.getElementById("2-6-4")
+    var value4 = select4.options[select4.selectedIndex].value;
+    var select5 = document.getElementById("2-6-5")
+    var value5 = select5.options[select5.selectedIndex].value;
+
+    if (id == "2-6-1")
+    {
+        if (value1 == "west"){
+            document.getElementById("trueFalse261").innerHTML = "Correct";
+            document.getElementById("trueFalse261").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse261").innerHTML = "Incorrect";
+            document.getElementById("trueFalse261").style.color = "red";
+        }
+    }
+
+    if (id == "2-6-2")
+    {
+        if (value2 == "north"){
+            document.getElementById("trueFalse262").innerHTML = "Correct";
+            document.getElementById("trueFalse262").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse262").innerHTML = "Incorrect";
+            document.getElementById("trueFalse262").style.color = "red";
+        }
+    }
+
+    if (id == "2-6-3")
+    {
+        if (value3 == "east"){
+            document.getElementById("trueFalse263").innerHTML = "Correct";
+            document.getElementById("trueFalse263").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse263").innerHTML = "Incorrect";
+            document.getElementById("trueFalse263").style.color = "red";
+        }
+    }
+
+    if (id == "2-6-4")
+    {
+        if (value4 == "east"){
+            document.getElementById("trueFalse264").innerHTML = "Correct";
+            document.getElementById("trueFalse264").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse264").innerHTML = "Incorrect";
+            document.getElementById("trueFalse264").style.color = "red";
+        }
+    }
+
+    if (id == "2-6-5")
+    {
+        if (value5 == "south"){
+            document.getElementById("trueFalse265").innerHTML = "Correct";
+            document.getElementById("trueFalse265").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse265").innerHTML = "Incorrect";
+            document.getElementById("trueFalse265").style.color = "red";
+        }
+    }   
+}
+
+function practice27(id){
+    var select1 = document.getElementById("2-7-1")
+    var value1 = select1.options[select1.selectedIndex].value;
+    var select2 = document.getElementById("2-7-2")
+    var value2 = select2.options[select2.selectedIndex].value;
+    var select3 = document.getElementById("2-7-3")
+    var value3 = select3.options[select3.selectedIndex].value;
+    var select4 = document.getElementById("2-7-4")
+    var value4 = select4.options[select4.selectedIndex].value;
+    var select5 = document.getElementById("2-7-5")
+    var value5 = select5.options[select5.selectedIndex].value;
+
+    if (id == "2-7-1")
+    {
+        if (value1 == "D"){
+            document.getElementById("trueFalse271").innerHTML = "Correct";
+            document.getElementById("trueFalse271").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse271").innerHTML = "Incorrect";
+            document.getElementById("trueFalse271").style.color = "red";
+        }
+    }
+
+    if (id == "2-7-2")
+    {
+        if (value2 == "E"){
+            document.getElementById("trueFalse272").innerHTML = "Correct";
+            document.getElementById("trueFalse272").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse272").innerHTML = "Incorrect";
+            document.getElementById("trueFalse272").style.color = "red";
+        }
+    }
+
+    if (id == "2-7-3")
+    {
+        if (value3 == "C"){
+            document.getElementById("trueFalse273").innerHTML = "Correct";
+            document.getElementById("trueFalse273").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse273").innerHTML = "Incorrect";
+            document.getElementById("trueFalse273").style.color = "red";
+        }
+    }
+
+    if (id == "2-7-4")
+    {
+        if (value4 == "A"){
+            document.getElementById("trueFalse274").innerHTML = "Correct";
+            document.getElementById("trueFalse274").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse274").innerHTML = "Incorrect";
+            document.getElementById("trueFalse274").style.color = "red";
+        }
+    }
+
+    if (id == "2-7-5")
+    {
+        if (value5 == "B"){
+            document.getElementById("trueFalse275").innerHTML = "Correct";
+            document.getElementById("trueFalse275").style.color = "green";
+        }
+        else{
+            document.getElementById("trueFalse275").innerHTML = "Incorrect";
+            document.getElementById("trueFalse275").style.color = "red";
+        }
+    }   
+}
