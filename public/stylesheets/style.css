@@ -48,3 +48,33 @@ th {
 .trueFalse {
   font-weight: bold;
 }
+
+.srdiv2 p {
+  width: 92%;
+  padding: 3%;
+  float: left;
+  border: 2px solid #09C;
+  margin-bottom: 6px;
+  font-size: 11pt
+}
+
+.srdiv2 p {
+  width: 655px;
+  float: left;
+  padding: 6px;
+  border: 2px solid #09C;
+  margin-bottom: 10px;
+  font-size: 11pt
+}
+
+.srdiv,
+.sorucozum p,
+.srdiv2 p {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3%;
+  float: left;
+  border: 2px solid #09C;
+  margin-bottom: 6px;
+  font-size: 11pt
+}

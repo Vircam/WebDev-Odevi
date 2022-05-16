@@ -1,4 +1,6 @@
 var express = require('express');
+var mysql = require('mysql');
+var http = require('http');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -13,6 +15,7 @@ var mat3Router = require('./routes/mat3');
 var fen1Router = require('./routes/fen1');
 var fen2Router = require('./routes/fen2');
 var fen3Router = require('./routes/fen3');
+var fenTestRouter = require('./routes/fentest');
 var app = express();
 
 app.use(logger('dev'));
@@ -35,5 +38,26 @@ app.use('/mat3', mat3Router);
 app.use('/fen1', fen1Router);
 app.use('/fen2', fen2Router);
 app.use('/fen3', fen3Router);
+app.use('/fentest', fenTestRouter);
 
 module.exports = app;
+
+http.createServer(function (req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.end('Hello World!');
+}).listen(8080);
+
+let connection = mysql.createConnection({
+  host: '127.0.0.1',
+  port: '3306',
+  user: 'root',
+  password: 'odin',
+  database: 'new_schema'
+});
+
+connection.connect(function (err) {
+  if (err) throw err;
+
+  console.log('MySQL bağlantısı başarıyla gerçekleştirildi.');
+
+});
