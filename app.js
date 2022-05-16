@@ -21,7 +21,7 @@ var fen3Router = require('./routes/fen3');
 var fenTestRouter = require('./routes/fentest');
 var app = express();
 
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 
 app.engine('html', require('ejs').renderFile);
 app.use(logger('dev'));
@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({ 
+app.use(session({
   secret: '123456cat',
   resave: false,
   saveUninitialized: true,

@@ -2,26 +2,16 @@
 <html lang="en">
 
 <head>
-        <title>Fetch using MySQL and Node.js</title>
-        <script>
-                function myFunction(userData) {
-                        document.getElementById('pp_1').submit();
-                                        if (userData.length != 0) {
-                                var i = 1;
-                                userData.forEach(function (data) {
-                                        i++;
-                                        alert(userData);
-                                })
-                        }
-                        // The function returns the product of p1 and p2
-                }
-        </script>
+        <title>
+                <%=title%>
+        </title>
+        <script src="/javascripts/fen_test.js"></script>
 </head>
+
 <body>
         <div class="table-data">
-                <h2>Display Data using Node.js & MySQL</h2>
                 <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
-                        <form class="contact" method="post" action="#" name="pp" id="pp_<%=data.test_id%>">
+                        <form name="form" id="pp_<%= data.test_id%>">
                                 <table border="1">
                                         <tr>
                                                 <th>
@@ -51,18 +41,20 @@
                                         </tr>
                                 </table>
                         </form>
-                        <pre id="#<%=data.test_id%>"></pre>
+
+
                         <% i++; }) } else{ %>
                                 <tr>
                                         <td colspan="7">No Data Found</td>
                                 </tr>
                                 <% } %>
-                                        <submit type='button' onclick="myFunction('<%userData%>')"
+                                        <submit type='button' onclick="submitForm('<%= JSON.stringify(userData) %>')"
                                                 value='Click to Submit Both Forms'>
                                                 kaydet
                                         </submit>
 
         </div>
+
 </body>
 
 </html>
