@@ -3,6 +3,9 @@ var mysql = require('mysql');
 var http = require('http');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var flash = require('express-flash');
+var session = require('express-session');
+var bodyParser = require('body-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
@@ -18,15 +21,24 @@ var fen3Router = require('./routes/fen3');
 var fenTestRouter = require('./routes/fentest');
 var app = express();
 
+app.set('view engine', 'html');
+
+app.engine('html', require('ejs').renderFile);
 app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ 
+  secret: '123456cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 60000 }
+}))
+app.use(flash());
 
-app.set('view engine', 'html');
-
-app.engine('html', require('ejs').renderFile);
 
 app.use('/', indexRouter);
 app.use('/eng1', eng1Router);
@@ -51,13 +63,16 @@ let connection = mysql.createConnection({
   host: '127.0.0.1',
   port: '3306',
   user: 'root',
-  password: 'odin',
-  database: 'new_schema'
+  password: '',
+  database: 'web_odev'
 });
 
 connection.connect(function (err) {
   if (err) throw err;
 
-  console.log('MySQL bağlantısı başarıyla gerçekleştirildi.');
+  connection.query('SELECT * FROM users', function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+  });
 
 });
