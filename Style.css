@@ -1,23 +1,23 @@
-html {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .parent {
-  margin: 1rem;
-  padding: 2rem 2rem;
-  text-align: center;
-}
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
 
 .child {
-  display: inline-block;
-  padding: 1rem 1rem;
-  vertical-align: middle;
-}
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }
 
 .center {
-  text-align: center;
-  list-style-position: inside;
-}
+    text-align: center;
+    list-style-position: inside;
+  }
 
 .boldCenter {
   text-align: center;
@@ -25,26 +25,39 @@ html {
   font-weight: bold;
 }
 
-.inlineBlocks {
-  width: 20%;
-  float: left;
-  margin: auto;
+.inlineBlocks{
+    width: 20%;
+    float: left;
+    margin: auto;
 }
 
-.endOfUnitParagraph {
-  font-size: 32pt;
-  font-weight: bold;
-  text-align: center;
+.endOfUnitParagraph{
+    font-size: 32pt;
+    font-weight: bold;
+    text-align: center;
 }
-
-table,
-tr,
-td,
-th {
+table, tr, td, th{
   border: 1pt solid;
   margin: auto;
 }
 
-.trueFalse {
+.trueFalse{
   font-weight: bold;
+}
+
+.sidebar{
+  display: flex;
+  float: right;
+  height:100vh
+}
+
+.verticalCenter{
+  position: fixed;
+  top: 50%;
+  right: 1em;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  list-style-position: inside;
 }
