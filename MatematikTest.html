@@ -6,8 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matematik Testi</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="MatematikTest.js"></script>
 </head>
 <body>
-    <button><a href="LandingPage.html">Get back to classes</a></button>
+    <h1 class="center">Matematik Sınavı</h1>
+    <div class="child">
+        <p id="soru1"><b>Soru 1: </b>15 + <b>B</b> > 40 ifadesindeki <b>B</b> yerine gelebilecek en küçük doğal sayı kaçtır?</p>
+        <select name="question1" id="question1" onclick="" onchange="bgChanger('q1')">
+            <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+        </select>
+
+        <p id="soru2"><b>Soru 2: </b>"43732" sayısındaki "3" rakamının basamak değerleri toplamı kaçtır?</p>
+        <select name="guestion2" id="question2" onclick="" onchange="bgChanger('q2')">
+            <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
+            <option value="1003">1003</option>
+            <option value="6">6</option>
+            <option value="3030">3030</option>
+            <option value="1030">1030</option>
+        </select>
+        <p id="soru3"><b>Soru 3: </b>En küçüğü <b>20</b> olan <b>ardışık üç doğal sayının</b> toplamı kaçtır?</p>
+        <input type="number" name="guestion3" id="question3" onchange="bgChanger('q3')">
+        <p id="soru4"><b>Soru 4: </b>Aşağıdaki tablodaki rakamları birer kez kullanılarak, okunuşları verilen sayılardan <b>kaç tanesi oluşturulabilir</b>?</p>
+        <table>
+            <tr>
+                <th><b>Rakamlar</b></th>
+                <td>7</td>
+                <td>3</td>
+                <td>0</td>
+                <td>6</td>
+                <td>4</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <ol type="I">
+            <li>Üç yüz altı bir dört yüz on bir</li>
+            <li>Altı yüz dört bin üç yüz yetmiş bir</li>
+            <li>Üç yüz dört bin yedi yüz on altı</li>
+            <li>Üç yüz dört bin yedi yüz altı</li>
+        </ol>
+        <select name="question4" id="question4" onchange="bgChanger('q4')">
+            <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <p id="soru5"><b>Soru 5: </b>Aşağıdaki örüntüde "?" olan yere hangi sayı gelmelidir?</p>
+        <table>
+            <tr>
+                <td>5</td>
+                <td>8</td>
+                <td>10</td>
+                <td>11</td>
+                <td>14</td>
+                <td>16</td>
+                <td>......</td>
+                <td>...?...</td>
+            </tr>
+        </table>
+        <select name="question5" id="question5" onchange="bgChanger('q5')">
+            <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
+            <option value="17">17</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+        </select>
+        <p id="soru6"><b>Soru 6: </b>Aşağıda verilen ifadeye göre "a" yerine <b>yazılabilecek rakamların</b> toplamı kaçtır?</p>
+        <p class="center"><b>45a8 > 4548</b></p>
+        <select name="question6" id="question6" onchange="bgChanger('q6')">
+            <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
+            <option value="21">21</option>
+            <option value="14">14</option>
+            <option value="35">35</option>
+            <option value="30">30</option>
+        </select>
+        <p id="soru7"><b>Soru 7: </b>Aşağıdaki çarpma işlemine göre <b>M x N</b> işleminin sonucu kaçtır?</p>
+        <p class="center">13 x M = 65 <br> 9 x N = 108</p>
+        <input type="number" id="question7" onchange="bgChanger('q7')">
+        <p id="soru8"><b>Soru 8: </b>Bir bölme işleminde <b>bölünen 367</b>, <b>bölüm 91</b>, ve <b>kalan 3</b> olduğuna göre <b>bölen sayı </b>kaçtır?</p>
+        <input type="number" id="question8" onchange="bgChanger('q8')">
+        <p id="soru9"><b>Soru 9: </b>Bir çıkarma işleminde eksilen, çıkan ve farkın toplamı 158 olduğuna göre <b>eksilen sayı</b> kaçtır?</p>
+        <select name="question9" id="question9" onchange="bgChanger('q9')">
+            <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
+            <option value="68">68</option>
+            <option value="69">69</option>
+            <option value="78">78</option>
+            <option value="79">79</option>
+        </select>
+        <p id="soru10"><b>Soru 10: </b>"8 yüz binlik + 7 on binlik + 3 yüzlük + 5 birlik" şeklinde çözümlenmiş sayı hangisidir?</p>
+        <select name="question10" id="question10" onchange="bgChanger('q10')">
+            <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
+            <option value="870305">870305</option>
+            <option value="870350">870350</option>
+            <option value="807305">807305</option>
+            <option value="807350">807350</option>
+        </select>
+    </div>
+    <div class="sidebar">
+        <ul class="verticalCenter">
+            <li id="q1"><a href="#soru1">Soru 1</a></li>
+            <li id="q2"><a href="#soru2">Soru 2</a></li>
+            <li id="q3"><a href="#soru3">Soru 3</a></li>
+            <li id="q4"><a href="#soru4">Soru 4</a></li>
+            <li id="q5"><a href="#soru5">Soru 5</a></li>
+            <li id="q6"><a href="#soru6">Soru 6</a></li>
+            <li id="q7"><a href="#soru7">Soru 7</a></li>
+            <li id="q8"><a href="#soru8">Soru 8</a></li>
+            <li id="q9"><a href="#soru9">Soru 9</a></li>
+            <li id="q10"><a href="#soru10">Soru 10</a></li>
+        </ul>        
+    </div>
+    <div class="center">
+        <button onclick="uyarı()">Sınavı Gönder</button>
+    </div>
 </body>
 </html>
