@@ -5,10 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Test</title>
+    <script src="English.js"></script>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <h1>English Test</h1>
-    <p>You will have 30 minutes to complete the test. Good luck!</p>
-    <button><a href="LandingPage.html">Get back to classes</a></button>
+    <div>
+        <h1 class="center">English Test</h1>
+        <p class="center"><b>Select the correct options according to questions.</b></p>
+    </div>
+    <div class="child">
+        <p id="question1"><b>Question 1: </b>Which is not a right thing to do in classroom?</p>
+        <select name="" id="q1" onchange="bgChanger('lq1')">
+            <option hidden disabled selected value>--select an option--</option>
+            <option value="a">Listen to your teacher.</option>
+            <option value="b">Raise your hand to speak.</option>
+            <option value="c">Eating in the classroom.</option>
+            <option value="d">Going to school in time.</option>
+        </select>
+        <p></p>
+        <p id="question2"><b>Question 2: </b>Fill in the blank.</p>
+        <p>May I read your <select name="" id="q2" onchange="bgChanger('lq2')">
+            <option hidden disabled selected value>--select an option--</option>
+            <option value="a">sandwich</option>
+            <option value="b">bicycle</option>
+            <option value="c">book</option>
+            <option value="d">door</option>
+        </select>?</p>
+        <p id="question3"><b>Question 3: </b>Match the number.</p>
+        <p>thirty-three <select name="" id="q3" onchange="bgChanger('lq3')">
+            <option hidden disabled selected value>--select an option--</option>
+        <option value="a">13</option>
+        <option value="b">33</option>
+        <option value="c">32</option>
+        <option value="d">31</option></select></p>
+        <p id="question4"><b>Question 4: </b>Read and select the correct word.</p>
+        <p>Hi, <select name="" id="q4" onchange="bgChanger('lq4')">
+            <option hidden disabled selected value>--select an option--</option>
+            <option value="a">her</option>
+            <option value="b">my</option>
+            <option value="c">your</option>
+            <option value="d">their</option>
+        </select> name is Linda</p>
+        <p id="question5"><b>Question 5: </b>Read and select the correct word.</p>
+        <p>Birds can <select name="" id="q5" onchange="bgChanger('lq5')">
+            <option hidden disabled selected value>--select an option--</option>
+            <option value="a">fly</option>
+            <option value="b">swim</option>
+            <option value="c">paint</option>
+            <option value="d">take pictures</option>
+        </select>
+        .</p>
+        <p id="question6"><b>Question 6: </b>Fill in the blank.</p>
+        <p>twenty - forty - sixty - <input type="text" id="q6" onchange="bgChanger('lq6')"></p>
+        <p id="question7"><b>Question 7: </b>Select the right language.</p>
+        <p>Japanese people talk <select name="" id="q7" onchange="bgChanger('lq7')">
+            <option hidden disabled selected value>--select an option--</option>
+            <option value="a">Russian</option>
+            <option value="b">Turkish</option>
+            <option value="c">Spanish</option>
+            <option value="d">Japanese</option>
+        </select>.</p>
+        <p id="question8"><b>Question 8: </b>Select the right answer.</p>
+        <p class="center">30 + 12 = ?</p>
+        <select name="" id="q8" onchange="bgChanger('lq8')">
+            <option hidden disabled selected value>--select an option--</option>
+            <option value="a">fifty-two</option>
+            <option value="b">sixty-two</option>
+            <option value="c">thirty-two</option>
+            <option value="d">forty-two</option>
+        </select>
+        <p id="question9"><b>Question 9: </b>Fill in the blank.</p>
+        <p class="center"><b>...?...</b> you like dancing?</p>
+        <select name="" id="q9" onchange="bgChanger('lq9')">
+            <option hidden disabled selected value>--select an option--</option>
+            <option value="a">Can</option>
+            <option value="b">Do</option>
+            <option value="c">Are</option>
+            <option value="d">Is</option>
+        </select>
+        <p id="question10"><b>Question 10: </b>Fill in the blank.</p>
+        <p>-Do you like dancing?<br>-Yes, <b>...?...</b></p>
+        <select name="" id="q10" onchange="bgChanger('lq10')">
+            <option hidden disabled selected value>--select an option--</option>
+            <option value="a">I do</option>
+            <option value="b">I can</option>
+            <option value="c">I am</option>
+            <option value="d">I don't</option>
+        </select>
+    </div>
+    <div class="sidebar">
+        <ul class="verticalCenter">
+            <li id="lq1"><a href="#question1">Question 1</a></li>
+            <li id="lq2"><a href="#question2">Question 2</a></li>
+            <li id="lq3"><a href="#question3">Question 3</a></li>
+            <li id="lq4"><a href="#question4">Question 4</a></li>
+            <li id="lq5"><a href="#question5">Question 5</a></li>
+            <li id="lq6"><a href="#question6">Question 6</a></li>
+            <li id="lq7"><a href="#question7">Question 7</a></li>
+            <li id="lq8"><a href="#question8">Question 8</a></li>
+            <li id="lq9"><a href="#question9">Question 9</a></li>
+            <li id="lq10"><a href="#question10">Question 10</a></li>
+        </ul>        
+    </div>
+    <div class="center">
+        <button onclick="warning()">Finish the Test</button>
+    </div>
 </body>
 </html>
