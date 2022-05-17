@@ -1032,3 +1032,17 @@ function practice27(id){
         }
     }   
 }
+
+function warning(){
+    if (confirm("Your answers will be send, are you sure?")){
+        window.location.href = "index.html";
+    }
+}
+
+function bgChanger(id){
+    document.getElementById(id).style.backgroundColor = "lightblue";
+}
+
+function sendAnswers(){
+    
+}
