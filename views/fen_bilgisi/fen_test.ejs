@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <script src="/javascripts/fen_test.js"></script>
+</head>
+
+<body>
+<div class="table-data">
+    <form name="form" action="/fentest" method="POST">
+        <% if(userData.length !== 0){ var i = 1; userData.forEach(function(data){ %>
+            <table>
+                <tr>
+                    <th>
+                        Soru <%= i; %>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="<%= data.test_question %>" alt="<%= data.name %>">
+                        <p><%= data._id %> </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <fieldset id="group<%= i %>">
+                            <label for="answer_d">A</label>
+                            <input type="radio"
+                                   name="group<%= i %>" value="a">
+                            <label for="answer_a">B</label>
+                            <input type="radio"
+                                   name="group<%= i %>" value="b">
+                            <label for="answer_b">C</label>
+                            <input type="radio"
+                                   name="group<%= i %>" value="c">
+                            <label for="answer_c">D</label>
+                            <input type="radio"
+                                   name="group<%= i %>" value="d">
+                        </fieldset>
+                    </th>
+                </tr>
+            </table>
+        <% i++; }) } %>
+        <button type='submit'>
+            kaydet
+        </button>
+    </form>
+</div>
+<p id="timer"></p>
+</body>
+
+</html>

@@ -1,12 +1,14 @@
-var mysql = require('mysql');
-var conn = mysql.createConnection({
-  host: 'localhost', // Replace with your host name
-  user: 'root',      // Replace with your database username
-  password: '',      // Replace with your database password
-  database: 'web_odev' // // Replace with your database Name
-}); 
-conn.connect(function(err) {
-  if (err) throw err;
-  console.log('Database is connected successfully !');
+var mongoose = require('mongoose');
+
+const {ServerApiVersion} = require("mongodb");
+const uri = "mongodb+srv://tearsfury:40045052339hF@cluster0.x0g8t.mongodb.net/Web-Odev";
+mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1});
+var conn = mongoose.connection;
+conn.on('connected', async function () {
+    console.log('database is   successfully');
 });
-module.exports = conn;
+conn.on('disconnected', function () {
+    console.log('database is disconnected successfully');
+})
+conn.on('error', console.error.bind(console, 'connection error:'));
+module.exports = mongoose;

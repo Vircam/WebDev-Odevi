@@ -1,0 +1,48 @@
+<html !DOCTYPE>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  <%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script>
+        if (typeof window !== 'undefined') {
+            window.localStorage.setItem('user_id','<%- userData._id%>');
+        } else {
+            console.log('You are on the server')
+            // 👉️ can't use localStorage
+        }
+    </script>
+</head>
+
+<body>
+<div class="parent">
+    <h1>4. Sınıf Dersleri</h1>
+    <h2>Matematik</h2>
+    <ol class="boldCenter">
+        <li><a href="mat1">Matematik 1. Ünite - Doğal Sayılar</a></li>
+        <li><a href="mat2">Matematik 2. Ünite - Toplama ve Çıkarma İşlemleri</a></li>
+        <li><a href="mat3">Matematik 3. Ünite - Çarpma ve Bölme İşlemleri</a></li>
+        <li><a href="MatematikTest">Matematik Sınavı</a></li>
+    </ol>
+    <h2>Fen Bilimleri</h2>
+    <ol class="boldCenter">
+        <li><a href="/fen1">Fen Bilimleri 1. Ünite - Yer Kabuğu ve Dünyamızın Hareketleri</a></li>
+        <li><a href="/fen2">Fen Bilimleri 2. Ünite - Besinlerimiz, Canlılar ve Yaşam</a></li>
+        <li><a href="/fen3">Fen Bilimleri 3. Ünite - Kuvvetin Etkileri ve Fiziksel Olaylar</a></li>
+        <li><a href="/fentest">Fen Bilimleri Sınavı</a></li>
+    </ol>
+    <h2>English</h2>
+    <ol class="boldCenter">
+        <li><a href="eng1">English Unit-1</a></li>
+        <li><a href="eng2">English Unit-2</a></li>
+        <li><a href="eng3">English Unit-3</a></li>
+        <li><a href="EnglishTest">English Test</a></li>
+    </ol>
+</div>
+<div id="panel"></div>
+</body>
+
+<html/>

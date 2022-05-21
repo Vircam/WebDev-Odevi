@@ -1,78 +1,79 @@
-var express = require('express');
-var mysql = require('mysql');
-var http = require('http');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var flash = require('express-flash');
-var session = require('express-session');
-var bodyParser = require('body-parser');
-var logger = require('morgan');
+const employee = require('./employe');
+const app = employee.express();
+passport = require("passport");
+LocalStrategy = require("passport-local");
+passportLocalMongoose = require("passport-local-mongoose");
+User = require("./models/user_model");
+const client = require("./database");
+const signRouter = require("./routes/sign/home_router");
 
-var indexRouter = require('./routes/index');
-var eng1Router = require('./routes/english1');
-var eng2Router = require('./routes/english2');
-var eng3Router = require('./routes/english3');
-var mat1Router = require('./routes/mat1');
-var mat2Router = require('./routes/mat2');
-var mat3Router = require('./routes/mat3');
-var fen1Router = require('./routes/fen1');
-var fen2Router = require('./routes/fen2');
-var fen3Router = require('./routes/fen3');
-var fenTestRouter = require('./routes/fentest');
-var app = express();
 
+app.set("views", employee.path.join(__dirname, "views"));
 app.set('view engine', 'ejs');
-
 app.engine('html', require('ejs').renderFile);
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
-  secret: '123456cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { maxAge: 60000 }
+
+app.use(employee.logger('dev'));
+app.use(employee.bodyParser.json());
+app.use(employee.bodyParser.urlencoded({extended: false}));
+app.use(employee.cookieParser());
+app.use(employee.express.static(employee.path.join(__dirname, 'public')));
+
+
+app.use(employee.session({
+    secret: '123456cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {maxAge: 60000}
 }))
-app.use(flash());
+app.use(passport.initialize(undefined));
+app.use(passport.session(undefined));
+passport.use(new LocalStrategy(
+    function(username, password, done) {
+        User.findOne({ username: username }, function (err, user) {
+            if (err) { return done(err); }
+            if (!user) { return done(null, false); }
+            if (!user.verifyPassword(password)) { return done(null, false); }
+            return done(null, user);
+        });
+    }
+));
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function (err, user) {
+        done(err, user);
+    });
+});
+
+app.use(employee.flash());
 
 
-app.use('/', indexRouter);
-app.use('/eng1', eng1Router);
-app.use('/eng2', eng2Router);
-app.use('/eng3', eng3Router);
-app.use('/mat1', mat1Router);
-app.use('/mat2', mat2Router);
-app.use('/mat3', mat3Router);
-app.use('/fen1', fen1Router);
-app.use('/fen2', fen2Router);
-app.use('/fen3', fen3Router);
-app.use('/fentest', fenTestRouter);
+app.use('/', employee.signRouter);
+app.use('/index', employee.signRouter);
+app.use('/register', employee.registerRouter);
+app.use('/login', employee.loginRouter);
+app.use('/eng1', employee.eng1Router);
+app.use('/eng2', employee.eng2Router);
+app.use('/eng3', employee.eng3Router);
+app.use('/mat1', employee.mat1Router);
+app.use('/mat2', employee.mat2Router);
+app.use('/mat3', employee.mat3Router);
+app.use('/fen1', employee.fen1Router);
+app.use('/fen2', employee.fen2Router);
+app.use('/fen3', employee.fen3Router);
+app.use('/fentest', employee.fenTestRouter);
+
+app.get("/logout", function (req, res) {
+    req.logout();
+    res.redirect("/");
+});
+
+
+
 
 module.exports = app;
 
-http.createServer(function (req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end('Hello World!');
-}).listen(8080);
 
-let connection = mysql.createConnection({
-  host: '127.0.0.1',
-  port: '3306',
-  user: 'root',
-  password: '',
-  database: 'web_odev'
-});
 
-connection.connect(function (err) {
-  if (err) throw err;
-
-  connection.query('SELECT * FROM users', function (err, result, fields) {
-    if (err) throw err;
-    console.log(result);
-  });
-
-});
