@@ -16,6 +16,7 @@ const eng3Router = require('./routes/english/english3');
 const mat1Router = require('./routes/matematik/mat1');
 const mat2Router = require('./routes/matematik/mat2');
 const mat3Router = require('./routes/matematik/mat3');
+const matTestRouter = require('./routes/matematik/mat_test');
 const fen1Router = require('./routes/fenbilgisi/fen1');
 const fen2Router = require('./routes/fenbilgisi/fen2');
 const fen3Router = require('./routes/fenbilgisi/fen3');
