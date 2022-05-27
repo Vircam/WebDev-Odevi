@@ -12,11 +12,11 @@ router.get("/", function (req, res) {
         password: ''
     })
 });
-router.post("/register", function (req, res) {
+router.post("/", function (req, res) {
     var email = req.body.email
+    var name = req.body.name
     var password = req.body.password
-    User.register(new User({ email: email }),
-        password, function (err, user) {
+    User.createData(name,email, password, function (err, user) {
             if (err) {
                 console.log(err);
                 return res.render("sign/register");
