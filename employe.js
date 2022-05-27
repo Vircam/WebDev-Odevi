@@ -40,6 +40,7 @@ module.exports = {
     mat1Router,
     mat2Router,
     mat3Router,
+    mat_test,
     fen1Router,
     fen2Router,
     fen3Router,
