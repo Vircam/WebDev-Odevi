@@ -1,17 +1,17 @@
 const express = require('express');
-const userModel = require("../models/user_model");
 const router = express.Router();
 
-router.get('/index', function(req, res, next) {
-  userModel.fetchData("huzeyfedinc@gmail.com","40045053",function (data) {
-    console.log('database is connected successfully: '+data);
-    res.render('index', { title: data, userData:data });
-  })
+router.get('/', function(req, res) {
+  console.log(req.session.userId);
+  if(req.session.userId){
+    res.render("index",{
+      title: 'Registration Page',
+      name: '',
+      email: '',
+      password: ''
+  });
+ }
+ res.render("index");
 });
-
-function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()) return next();
-  res.redirect("/login");
-}
 
 module.exports = router;

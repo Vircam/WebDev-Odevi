@@ -3,9 +3,8 @@ const app = employee.express();
 passport = require("passport");
 LocalStrategy = require("passport-local");
 passportLocalMongoose = require("passport-local-mongoose");
-User = require("./models/user_model");
 const client = require("./database");
-const signRouter = require("./routes/sign/home_router");
+const User = require("./models/user_model");
 
 
 app.set("views", employee.path.join(__dirname, "views"));
@@ -29,7 +28,7 @@ app.use(passport.initialize(undefined));
 app.use(passport.session(undefined));
 passport.use(new LocalStrategy(
     function(username, password, done) {
-        User.findOne({ username: username }, function (err, user) {
+        User.findOne({ user_name: username }, function (err, user) {
             if (err) { return done(err); }
             if (!user) { return done(null, false); }
             if (!user.verifyPassword(password)) { return done(null, false); }
@@ -51,7 +50,7 @@ app.use(employee.flash());
 
 
 app.use('/', employee.signRouter);
-app.use('/index', employee.signRouter);
+app.use('/index', employee.indexRouter);
 app.use('/register', employee.registerRouter);
 app.use('/login', employee.loginRouter);
 app.use('/eng1', employee.eng1Router);

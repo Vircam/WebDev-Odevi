@@ -5,6 +5,9 @@ const router = express.Router();
 
 // Showing register form
 router.get("/", function (req, res) {
+    if(req.session.userId){
+        return res.redirect("/index");
+     }
     res.render('sign/register', {
         title: 'Registration Page',
         name: '',
@@ -24,7 +27,7 @@ router.post("/", function (req, res) {
             passport.authenticate("local")(
                 req, res, function () {
                     req.flash('success', 'You have logged in')
-                    res.render("home");
+                    res.render("index");
                 });
         });
 });
