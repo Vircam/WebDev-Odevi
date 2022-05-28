@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>  <%= title %></title>
-        <link rel="stylesheet" href="/stylesheets/style.css">
         <script>
             if (typeof window !== 'undefined') {
                 window.localStorage.setItem('user_id','<%- userData._id%>');
@@ -13,25 +12,24 @@
                 console.log('You are on the server')
                 // 👉️ can't use localStorage
             }
-        </script>
+            </script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="stylesheet" href="Style.css">
-        <link rel="icon" href="Matematik Fotoğrafları/rainbow.png">
-        <script src="index.js"></script>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link rel="icon" href="images/mat_images/rainbow.png">
     </head>
     <body>
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <div class="container">
-                <a href="index.html" class="navbar-brand">Anasayfa</a>
+                <a href="index" class="navbar-brand">Anasayfa</a>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       Matematik
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="Matematik-1.html">1. Ünite - Doğal Sayılar</a></li>
-                      <li><a class="dropdown-item" href="Matematik-2.html">2. Ünite - Toplama ve Çıkarma İşlemleri</a></li>
-                      <li><a class="dropdown-item" href="Matematik-3.html">3. Ünite - Çarpma ve Bölme İşlemleri</a></li>
-                      <li><a class="dropdown-item" href="MatematikTest.html">Matematik Sınavı</a></li>
+                      <li><a class="dropdown-item" href="mat1">1. Ünite - Doğal Sayılar</a></li>
+                      <li><a class="dropdown-item" href="mat2">2. Ünite - Toplama ve Çıkarma İşlemleri</a></li>
+                      <li><a class="dropdown-item" href="mat3">3. Ünite - Çarpma ve Bölme İşlemleri</a></li>
+                      <li><a class="dropdown-item" href="mattest">Matematik Sınavı</a></li>
                     </ul>
                 </div>
                 <div class="dropdown">
@@ -39,10 +37,10 @@
                       Fen Bilimleri
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="fen-1.html">1. Ünite - Yer Kabuğu ve Dünyamızın Hareketleri</a></li>
-                      <li><a class="dropdown-item" href="fen-2.html">2. Ünite - Besinlerimiz, Canlılar ve Yaşam</a></li>
-                      <li><a class="dropdown-item" href="fen-3.html">3. Ünite - Kuvvetin Etkileri ve Fiziksel Olaylar</a></li>
-                      <li><a class="dropdown-item" href="fen_test1.html">Fen Bilimleri Sınavı</a></li>
+                      <li><a class="dropdown-item" href="fen1">1. Ünite - Yer Kabuğu ve Dünyamızın Hareketleri</a></li>
+                      <li><a class="dropdown-item" href="fen2">2. Ünite - Besinlerimiz, Canlılar ve Yaşam</a></li>
+                      <li><a class="dropdown-item" href="fen3">3. Ünite - Kuvvetin Etkileri ve Fiziksel Olaylar</a></li>
+                      <li><a class="dropdown-item" href="fentest">Fen Bilimleri Sınavı</a></li>
                     </ul>
                 </div>
                 <div class="dropdown">
@@ -50,10 +48,10 @@
                       English
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="English-1.html">Unit-1 Classroom Rules</a></li>
-                      <li><a class="dropdown-item" href="English-2.html">Unit-2 Nationality</a></li>
-                      <li><a class="dropdown-item" href="English-3.html">Unit-3 Cartoon Characters</a></li>
-                      <li><a class="dropdown-item" href="EnglishTest.html">English Exam</a></li>
+                      <li><a class="dropdown-item" href="eng1">Unit-1 Classroom Rules</a></li>
+                      <li><a class="dropdown-item" href="eng2">Unit-2 Nationality</a></li>
+                      <li><a class="dropdown-item" href="eng3">Unit-3 Cartoon Characters</a></li>
+                      <li><a class="dropdown-item" href="engtest">English Exam</a></li>
                     </ul>
                 </div>
                 <div>
@@ -69,28 +67,28 @@
                     <div class="col">
                         <h2>Matematik</h2>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="Matematik-1.html">Matematik 1. Ünite - Doğal Sayılar</a></li>
-                            <li class="list-group-item"><a href="Matematik-2.html">Matematik 2. Ünite - Toplama ve Çıkarma İşlemleri</a></li>
-                            <li class="list-group-item"><a href="Matematik-3.html">Matematik 3. Ünite - Çarpma ve Bölme İşlemleri</a></li>
-                            <li class="list-group-item"><a href="MatematikTest.html">Matematik Sınavı</a></li>
+                            <li class="list-group-item"><a href="mat1">Matematik 1. Ünite - Doğal Sayılar</a></li>
+                            <li class="list-group-item"><a href="mat2">Matematik 2. Ünite - Toplama ve Çıkarma İşlemleri</a></li>
+                            <li class="list-group-item"><a href="mat3">Matematik 3. Ünite - Çarpma ve Bölme İşlemleri</a></li>
+                            <li class="list-group-item"><a href="mattest">Matematik Sınavı</a></li>
                         </ul>
                     </div>
                     <div class="col">
                         <h2>Fen Bilimleri</h2>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="fen-1.html">Fen Bilimleri 1. Ünite - Yer Kabuğu ve Dünyamızın Hareketleri</a></li>
-                            <li class="list-group-item"><a href="fen-2.html">Fen Bilimleri 2. Ünite - Besinlerimiz, Canlılar ve Yaşam</a></li>
-                            <li class="list-group-item"><a href="fen-3.html">Fen Bilimleri 3. Ünite - Kuvvetin Etkileri ve Fiziksel Olaylar</a></li>
-                            <li class="list-group-item"><a href="fen_test1.html">Fen Bilimleri Sınavı</a></li>
+                            <li class="list-group-item"><a href="fen1">Fen Bilimleri 1. Ünite - Yer Kabuğu ve Dünyamızın Hareketleri</a></li>
+                            <li class="list-group-item"><a href="fen2">Fen Bilimleri 2. Ünite - Besinlerimiz, Canlılar ve Yaşam</a></li>
+                            <li class="list-group-item"><a href="fen3">Fen Bilimleri 3. Ünite - Kuvvetin Etkileri ve Fiziksel Olaylar</a></li>
+                            <li class="list-group-item"><a href="fentest">Fen Bilimleri Sınavı</a></li>
                         </ul>
                     </div>
                     <div class="col">
                         <h2>English</h2>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="English-1.html">English Unit-1 Classroom Rules</a></li>
-                            <li class="list-group-item"><a href="English-2.html">English Unit-2 Nationality</a></li>
-                            <li class="list-group-item"><a href="English-3.html">English Unit-3 Cartoon Characters</a></li>
-                            <li class="list-group-item"><a href="EnglishTest.html">English Exam</a></li>
+                            <li class="list-group-item"><a href="eng1">English Unit-1 Classroom Rules</a></li>
+                            <li class="list-group-item"><a href="eng2">English Unit-2 Nationality</a></li>
+                            <li class="list-group-item"><a href="eng3">English Unit-3 Cartoon Characters</a></li>
+                            <li class="list-group-item"><a href="engtest">English Exam</a></li>
                         </ul>
                     </div>
                 </div>
