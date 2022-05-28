@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Unit 1</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="/javascripts/English.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="Matematik Fotoğrafları/rainbow.png">
+    <script src="English.js"></script>
 </head>
-
 <body>
-    <h1 align="center">English Unit 1</h1>
-    <h2 align="center">Classroom Rules</h2>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Anasayfa</a>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Matematik
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="Matematik-1.html">1. Ünite - Doğal Sayılar</a></li>
+                  <li><a class="dropdown-item" href="Matematik-2.html">2. Ünite - Toplama ve Çıkarma İşlemleri</a></li>
+                  <li><a class="dropdown-item" href="Matematik-3.html">3. Ünite - Çarpma ve Bölme İşlemleri</a></li>
+                  <li><a class="dropdown-item" href="MatematikTest.html">Matematik Sınavı</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Fen Bilimleri
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="fen-1.html">1. Ünite - Yer Kabuğu ve Dünyamızın Hareketleri</a></li>
+                  <li><a class="dropdown-item" href="fen-2.html">2. Ünite - Besinlerimiz, Canlılar ve Yaşam</a></li>
+                  <li><a class="dropdown-item" href="fen-3.html">3. Ünite - Kuvvetin Etkileri ve Fiziksel Olaylar</a></li>
+                  <li><a class="dropdown-item" href="fen_test1.html">Fen Bilimleri Sınavı</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  English
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="English-1.html">Unit-1 Classroom Rules</a></li>
+                  <li><a class="dropdown-item" href="English-2.html">Unit-2 Nationality</a></li>
+                  <li><a class="dropdown-item" href="English-3.html">Unit-3 Cartoon Characters</a></li>
+                  <li><a class="dropdown-item" href="EnglishTest.html">English Exam</a></li>
+                </ul>
+            </div>
+            <div>
+                <button type="button" class="btn btn-warning">Kayıt Ol</button>
+                <button type="button" class="btn btn-success">Giriş Yap</button>
+            </div>
+        </div>
+    </nav>
     <section class="parent">
-        <h3>1. Match the images with the correct conversation.</h3>
+        <h1 class="">English Unit 1</h1>
+        <h2 class="bg-secondary">Classroom Rules</h2>
+        <h3 class="bg-warning">1. Match the images with the correct conversation.</h3>
         <div class="child">
-            <p><strong>a.</strong></p><img src="/images/eng_images/English-1,1.1.png" alt="">
-            <p><strong>b.</strong></p><img src="/images/eng_images/English-1,1.2.png" alt="">
-            <p><strong>c.</strong></p><img src="/images/eng_images/English-1,1.3.png" alt="">
+            <p><strong>a.</strong></p><img src="images/eng_images/English-1,1.1.png" alt="">
+            <p><strong>b.</strong></p><img src="images/eng_images/English-1,1.2.png" alt="">
+            <p><strong>c.</strong></p><img src="images/eng_images/English-1,1.3.png" alt="">
         </div>
         <div class="child">
             <div>
@@ -56,12 +98,12 @@
                     </select>
                 </p>
                 <p id="trueFalse113" class="trueFalse"></p>
-            </div>
+           </div>
         </div>
     </section>
     <section class="parent">
-        <h3>2. Choose the appropriate words to describe the images below.</h3>
-        <img src="/images/eng_images/English-1,2.1.png" alt="">
+        <h3 class="bg-warning">2. Choose the appropriate words to describe the images below.</h3>
+        <img src="images/eng_images/English-1,2.1.png" alt="">
         <div>
             <select id="1-2-1" onchange="practice12('1-2-1')">
                 <option hidden disabled selected value> -- select an option -- </option>
@@ -70,7 +112,7 @@
             </select>
             <p class="trueFalse" id="trueFalse121"></p>
         </div>
-        <img src="/images/eng_images/English-1,2.2.png" alt="">
+        <img src="images/eng_images/English-1,2.2.png" alt="">
         <div>
             <select name="" id="1-2-2" onchange="practice12('1-2-2')">
                 <option hidden disabled selected value> -- select an option -- </option>
@@ -79,7 +121,7 @@
             </select>
             <p class="trueFalse" id="trueFalse122"></p>
         </div>
-        <img src="/images/eng_images/English-1,2.3.png" alt="">
+        <img src="images/eng_images/English-1,2.3.png" alt="">
         <div>
             <select name="" id="1-2-3" onchange="practice12('1-2-3')">
                 <option hidden disabled selected value> -- select an option -- </option>
@@ -88,7 +130,7 @@
             </select>
             <p class="trueFalse" id="trueFalse123"></p>
         </div>
-        <img src="/images/eng_images/English-1,2.4.png" alt="">
+        <img src="images/eng_images/English-1,2.4.png" alt="">
         <div>
             <select name="" id="1-2-4" onchange="practice12('1-2-4')">
                 <option hidden disabled selected value> -- select an option -- </option>
@@ -99,20 +141,20 @@
         </div>
     </section>
     <section class="parent" display="inline">
-        <h3>3. Match the correct conversations with the images.</h3>
+        <h3 class="bg-warning">3. Match the correct conversations with the images.</h3>
         <div class="child">
             <p>1.</p>
-            <img src="/images/eng_images/English-1,3.1.png" alt="">
+            <img src="images/eng_images/English-1,3.1.png" alt="">
             <p>2.</p>
-            <img src="/images/eng_images/English-1,3.2.png" alt="">
+            <img src="images/eng_images/English-1,3.2.png" alt="">
             <p>3.</p>
-            <img src="/images/eng_images/English-1,3.3.png" alt="">
+            <img src="images/eng_images/English-1,3.3.png" alt="">
             <p>4.</p>
-            <img src="/images/eng_images/English-1,3.4.png" alt="">
+            <img src="images/eng_images/English-1,3.4.png" alt="">
         </div>
         <div class="child">
             <p>A: May I join the game?<br>
-                B: Sure. Let's play. <select name="images" id="1-3-1" onchange="practice13('1-3-1')">
+                B: Sure. Let's play. <select    name="images" id="1-3-1" onchange="practice13('1-3-1')">
                     <option hidden disabled selected value> -- select an option -- </option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -127,38 +169,35 @@
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </p>
-            <p class="trueFalse" id="trueFalse132"></p>
+                    <option value="4">4</option></select>
+                </p>
+                <p class="trueFalse" id="trueFalse132"></p>
             <p>A: May I take your crayons?<br>
                 B: Of course. <select name="images" id="1-3-3" onchange="practice13('1-3-3')">
                     <option hidden disabled selected value> -- select an option -- </option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </p>
-            <p class="trueFalse" id="trueFalse133"></p>
+                    <option value="4">4</option></select>
+                </p>
+                <p class="trueFalse" id="trueFalse133"></p>
             <p>A: Can I go out, teacher?<br>
                 B: Of course, you can. <select name="images" id="1-3-4" onchange="practice13('1-3-4')">
                     <option hidden disabled selected value> -- select an option -- </option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </p>
-            <p class="trueFalse" id="trueFalse134"></p>
+                    <option value="4">4</option></select>
+                </p>
+                <p class="trueFalse" id="trueFalse134"></p>
         </div>
     </section>
     <section class="parent">
-        <h3>4. Read the classroom rules. Follow the instructions.</h3>
-        <img src="/images/eng_images/English-1,4.1.png" alt="Classroom Rules" class="centeredDiv">
+        <h3 class="bg-danger">4. Read the classroom rules. Follow the instructions.</h3>
+        <img src="images/eng_images/English-1,4.1.png" alt="Classroom Rules" class="centeredDiv">
     </section>
     <section class="parent">
-        <h3>5. Write the missing numbers.</h3>
+        <h3 class="bg-warning">5. Write the missing numbers.</h3>
         <p><strong>a.</strong> 5 - 10 - <input type="number" id="15a" value="0" onchange="practice151('15a')"> - 20</p>
         <p class="trueFalse" id="1-5-1"></p>
         <p><strong>b.</strong> 3 - 6 - 9 - <input type="number" id="15b" value="0" onchange="practice151('15b')"></p>
@@ -169,10 +208,10 @@
         <p class="trueFalse" id="1-5-4"></p>
     </section>
     <section class="parent">
-        <h3>6. Match the numbers</h3>
+        <h3 class="bg-warning">6. Match the numbers</h3>
         <div class="child">
             <ol class="center">
-                <li>thirty-two
+                <li>thirty-two 
                     <select name="numbers" id="1-6-1" onchange="practice16('1-6-1')">
                         <option hidden disabled selected value> -- select an option -- </option>
                         <option value="A">A</option>
@@ -323,146 +362,145 @@
             </ol>
         </div>
     </section>
-    <h2 align="center"><strong>LET'S PRACTICE</strong></h2>
     <section class="parent">
-        <h3>7. Match and say.</h3>
+        <h2 class="bg-success"><strong>LET'S PRACTICE</strong></h2>
+        <h3 class="bg-warning">7. Match and say.</h3>
         <div class="child">
-            <img src="/images/eng_images/English-1,7.1.png" alt="">
+            <img src="images/eng_images/English-1,7.1.png" alt="">
         </div>
         <div class="child">
             <p>1. May I read the <select name="objects" id="1-7-1" onchange="practice17('1-7-1')">
-                    <option hidden disabled selected value> -- select an option -- </option>
-                    <option value="a">a</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                    <option value="e">e</option>
-                    <option value="f">f</option>
-                    <option value="g">g</option>
-                </select>?</p>
+                <option hidden disabled selected value> -- select an option -- </option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+                <option value="f">f</option>
+                <option value="g">g</option>
+            </select>?</p>
             <p class="trueFalse" id="trueFalse171"></p>
             <p>2. Can I use your <select name="objects" id="1-7-2" onchange="practice17('1-7-2')">
-                    <option hidden disabled selected value> -- select an option -- </option>
-                    <option value="a">a</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                    <option value="e">e</option>
-                    <option value="f">f</option>
-                    <option value="g">g</option>
-                </select>?</p>
+                <option hidden disabled selected value> -- select an option -- </option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+                <option value="f">f</option>
+                <option value="g">g</option>
+            </select>?</p>
             <p class="trueFalse" id="trueFalse172"></p>
             <p>3. May I open the <select name="objects" id="1-7-3" onchange="practice17('1-7-3')">
-                    <option hidden disabled selected value> -- select an option -- </option>
-                    <option value="a">a</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                    <option value="e">e</option>
-                    <option value="f">f</option>
-                    <option value="g">g</option>
-                </select>?</p>
+                <option hidden disabled selected value> -- select an option -- </option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+                <option value="f">f</option>
+                <option value="g">g</option>
+            </select>?</p>
             <p class="trueFalse" id="trueFalse173"></p>
             <p>4. May I clean the <select name="objects" id="1-7-4" onchange="practice17('1-7-4')">
-                    <option hidden disabled selected value> -- select an option -- </option>
-                    <option value="a">a</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                    <option value="e">e</option>
-                    <option value="f">f</option>
-                    <option value="g">g</option>
-                </select>?</p>
+                <option hidden disabled selected value> -- select an option -- </option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+                <option value="f">f</option>
+                <option value="g">g</option>
+            </select>?</p>
             <p class="trueFalse" id="trueFalse174"></p>
             <p>5. Can I ride your <select name="objects" id="1-7-5" onchange="practice17('1-7-5')">
-                    <option hidden disabled selected value> -- select an option -- </option>
-                    <option value="a">a</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                    <option value="e">e</option>
-                    <option value="f">f</option>
-                    <option value="g">g</option>
-                </select>?</p>
+                <option hidden disabled selected value> -- select an option -- </option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+                <option value="f">f</option>
+                <option value="g">g</option>
+            </select>?</p>
             <p class="trueFalse" id="trueFalse175"></p>
             <p>6. May I listen to the <select name="objects" id="1-7-6" onchange="practice17('1-7-6')">
-                    <option hidden disabled selected value> -- select an option -- </option>
-                    <option value="a">a</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                    <option value="e">e</option>
-                    <option value="f">f</option>
-                    <option value="g">g</option>
-                </select>?</p>
+                <option hidden disabled selected value> -- select an option -- </option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+                <option value="f">f</option>
+                <option value="g">g</option>
+            </select>?</p>
             <p class="trueFalse" id="trueFalse176"></p>
             <p>7. May I eat a <select name="objects" id="1-7-7" onchange="practice17('1-7-7')">
-                    <option hidden disabled selected value> -- select an option -- </option>
-                    <option value="a">a</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                    <option value="d">d</option>
-                    <option value="e">e</option>
-                    <option value="f">f</option>
-                    <option value="g">g</option>
-                </select>?</p>
+                <option hidden disabled selected value> -- select an option -- </option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+                <option value="f">f</option>
+                <option value="g">g</option>
+            </select>?</p>
             <p class="trueFalse" id="trueFalse177"></p>
         </div>
     </section>
     <section class="parent">
-        <h3>8. Read and match.</h3>
+        <h3 class="bg-warning">8. Read and match.</h3>
         <div class="child">
-            <img src="/images/eng_images/English-1,8.1.png" alt="">
+            <img src="images/eng_images/English-1,8.1.png" alt="">
         </div>
         <div class="child">
             <ol class="center">
                 <li>Raise your hand to speak. <select name="sentences" id="1-8-1" onchange="practice18('1-8-1')">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
-                        <option value="e">e</option>
-                    </select></li>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                    <option value="d">d</option>
+                    <option value="e">e</option>
+                </select></li>
                 <p class="trueFalse" id="trueFalse181"></p>
                 <li>Don't eat in the classroom. <select name="sentences" id="1-8-2" onchange="practice18('1-8-2')">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
-                        <option value="e">e</option>
-                    </select></li>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                    <option value="d">d</option>
+                    <option value="e">e</option>
+                </select></li>
                 <p class="trueFalse" id="trueFalse182"></p>
                 <li>Go to school on time. <select name="sentences" id="1-8-3" onchange="practice18('1-8-3')">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
-                        <option value="e">e</option>
-                    </select></li>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                    <option value="d">d</option>
+                    <option value="e">e</option>
+                </select></li>
                 <p class="trueFalse" id="trueFalse183"></p>
                 <li>Listen to your teacher. <select name="sentences" id="1-8-4" onchange="practice18('1-8-4')">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
-                        <option value="e">e</option>
-                    </select></li>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                    <option value="d">d</option>
+                    <option value="e">e</option>
+                </select></li>
                 <p class="trueFalse" id="trueFalse184"></p>
-                <li>Don't play volleyball in the classroom. <select name="sentences" id="1-8-5"
-                        onchange="practice18('1-8-5')">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
-                        <option value="e">e</option>
-                    </select></li>
+                <li>Don't play volleyball in the classroom. <select name="sentences" id="1-8-5" onchange="practice18('1-8-5')">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                    <option value="d">d</option>
+                    <option value="e">e</option>
+                </select></li>
                 <p class="trueFalse" id="trueFalse185"></p>
             </ol>
         </div>
     </section>
     <section class="parent">
-        <h3>9. Can you find the missing numbers?</h3>
-        <img src="/images/eng_images/English-1,9.1.png" alt="">
+        <h3 class="bg-warning">9. Can you find the missing numbers?</h3>
+        <img src="images/eng_images/English-1,9.1.png" alt="">
         <div class="paragraphs">
             <p><b>1. </b>Orange Bird - <input type="text" id="1-9-1" onchange="practice19('1-9-1')"></p>
             <p class="trueFalse" id="trueFalse191"></p>
@@ -476,13 +514,9 @@
     </section>
     <p class="endOfUnitParagraph">End of Unit 1</p>
     <div class="parent">
-        <div class="child">
-            <button><a href="LandingPage.html">Other Classes</a></button>
-        </div>
-        <div class="child">
-            <button><a href="English-2.html">Next Unit</a></button>
-        </div>
+        <a href="index.html" class="btn btn-dark" role="button">Main Page</a>
+        <a href="English-2.html" class="btn btn-primary" role="button">English Unit 2</a>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
-
 </html>
