@@ -10,9 +10,10 @@ const indexRouter = require('./routes/index_router');
 const signRouter = require('./routes/sign/home_router');
 const loginRouter = require('./routes/sign/login_route');
 const registerRouter = require('./routes/sign/register_route');
-const eng1Router = require('./routes/english/english1');
-const eng2Router = require('./routes/english/english2');
-const eng3Router = require('./routes/english/english3');
+const eng1Router = require('./routes/english/eng1');
+const eng2Router = require('./routes/english/eng2');
+const eng3Router = require('./routes/english/eng3');
+const engTestRouter = require('./routes/english/engtest');
 const mat1Router = require('./routes/matematik/mat1');
 const mat2Router = require('./routes/matematik/mat2');
 const mat3Router = require('./routes/matematik/mat3');
@@ -37,6 +38,7 @@ module.exports = {
     eng1Router,
     eng2Router,
     eng3Router,
+    engTestRouter,
     mat1Router,
     mat2Router,
     mat3Router,
