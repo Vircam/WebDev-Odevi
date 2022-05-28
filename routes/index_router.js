@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
       password: ''
   });
  }
- res.render("index");
+ res.redirect("/login");
 });
 
 module.exports = router;
