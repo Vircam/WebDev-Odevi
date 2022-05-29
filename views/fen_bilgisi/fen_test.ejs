@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<% var matSoru;%>
+<% sorular.user_test.forEach(function (value) { if(value.test_catid==="2") matSoru=value } )%>
 
 <head>
     <title>
@@ -12,6 +14,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" href="images/mat_images/rainbow.png">
+    <script>
+        countDownTimer('<%= matSoru.test_sure%>',"/fentest",'<%= matSoru._id%>');
+    </script>
 </head>
 
 <body>
@@ -57,44 +62,6 @@
             </div>
         </div>
     </nav>
-<div class="parent">
-    <form name="form" action="/fentest" method="POST">
-        <% if(userData.length !== 0){ var i = 1; userData.forEach(function(data){ %>
-            <table>
-                <tr>
-                    <th>
-                        Soru <%= i; %>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="<%= data.test_question %>" alt="<%= data.name %>">
-                        <p><%= data._id %> </p>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <fieldset id="group<%= i %>">
-                            <label for="answer_d">A</label>
-                            <input type="radio"
-                                   name="group<%= i %>" value="a">
-                            <label for="answer_a">B</label>
-                            <input type="radio"
-                                   name="group<%= i %>" value="b">
-                            <label for="answer_b">C</label>
-                            <input type="radio"
-                                   name="group<%= i %>" value="c">
-                            <label for="answer_c">D</label>
-                            <input type="radio"
-                                   name="group<%= i %>" value="d">
-                        </fieldset>
-                    </th>
-                </tr>
-            </table>
-        <% i++; }) } %>
-        <button class="btn btn-primary" role="button" type='submit'>Kaydet</button>
-    </form>
-</div>
     <p id="timer"></p>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

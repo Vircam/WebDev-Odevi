@@ -6,7 +6,7 @@ function post(path, params, method = 'post') {
     xhr.send(JSON.stringify(params));
 }
 
-function countDownTimer() {
+function countDownTimer(time,path,id) {
     var countDownDate = new Date().getTime() + 30 * 60000;
 
     var x = setInterval(function () {
@@ -23,8 +23,11 @@ function countDownTimer() {
         document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
         if (seconds % 5 === 0) {
             post('/fentest', {
-                user_id:localStorage.getItem("user_id"),
-                test_sure: (minutes + "m " + seconds + "s "),
+                id:id,
+                isDone:false,
+                test_sure: new Date().getTime(),
+                baslangic:0,
+                bitis:0,
                 soru1: "a",
                 soru2: "b",
                 soru3: "c",

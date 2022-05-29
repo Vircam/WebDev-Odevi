@@ -5,8 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4094367-acb9-47be-9bb2-b90e10e8aec8" name="Changes" comment="db">
+      <change afterPath="$PROJECT_DIR$/public/javascripts/eng_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/mat_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/matematik/mattest_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employe.js" beforeDir="false" afterPath="$PROJECT_DIR$/employe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/mat_model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/mat_model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user_model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user_model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/fen_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/fen_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/english/eng1.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/english/eng1_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/english/eng2.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/english/eng2_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/english/eng3.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/english/eng3_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/english/engtest.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/english/engtest_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/fenbilgisi/fen1.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fenbilgisi/fen1_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/fenbilgisi/fen2.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fenbilgisi/fen2_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/fenbilgisi/fen3.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fenbilgisi/fen3_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/fenbilgisi/fen_test_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fenbilgisi/fentest_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/matematik/mat1.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/matematik/mat1_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/matematik/mat2.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/matematik/mat2_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/matematik/mat3.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/matematik/mat3_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/matematik/mat_test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/sign/login_route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/sign/login_route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/sign/register_route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/sign/register_route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fen_bilgisi/fen_test.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fen_bilgisi/fen_test.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/matematik/mat_test.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/matematik/mat_test.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +55,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -42,6 +73,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29PZD5J1PE7uDAjurDx8X92edXL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,7 +87,7 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "16.15.0",
     "javascript.nodejs.core.library.typings.version": "16.11.36",
-    "last_opened_file_path": "C:/Users/Huzeyfe/webodev/views",
+    "last_opened_file_path": "C:/Users/Huzeyfe/webb/models",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,10 +104,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Huzeyfe\webb\models" />
+      <recent name="C:\Users\Huzeyfe\webb" />
       <recent name="C:\Users\Huzeyfe\webodev\views" />
       <recent name="C:\Users\Huzeyfe\webodev\models" />
       <recent name="C:\Users\Huzeyfe\webodev\controller" />
-      <recent name="C:\Users\Huzeyfe\webodev\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Huzeyfe\webodev\routes\matematik" />

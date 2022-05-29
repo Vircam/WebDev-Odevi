@@ -4,7 +4,7 @@ const router = express.Router();
 router.get('/', function(req, res) {
   console.log(req.session.userId);
   if(req.session.userId){
-    res.render("index",{
+   return  res.render("index",{
       title: 'Registration Page',
       name: '',
       email: '',

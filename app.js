@@ -5,6 +5,7 @@ LocalStrategy = require("passport-local");
 passportLocalMongoose = require("passport-local-mongoose");
 const client = require("./database");
 const User = require("./models/user_model");
+const MemoryStore = require("express-session/session/memory");
 
 
 app.set("views", employee.path.join(__dirname, "views"));
@@ -22,13 +23,14 @@ app.use(employee.session({
     secret: '123456cat',
     resave: false,
     saveUninitialized: true,
-    cookie: {maxAge: 60000}
+    store: new MemoryStore(),
+    cookie: {maxAge: 30*60000}
 }))
 app.use(passport.initialize(undefined));
 app.use(passport.session(undefined));
 passport.use(new LocalStrategy(
     function(username, password, done) {
-        User.findOne({ user_name: username }, function (err, user) {
+        User.signIn(username,password,function (err, user) {
             if (err) { return done(err); }
             if (!user) { return done(null, false); }
             if (!user.verifyPassword(password)) { return done(null, false); }

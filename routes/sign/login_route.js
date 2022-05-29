@@ -20,7 +20,7 @@ router.post("/", function (req, res) {
     var email = req.body.email
     var password = req.body.password
     console.log(email, password)
-    User.fetchData(email, password, function (user) {
+    User.signIn(email, password, function (user) {
         if (!user) {
             console.log(user);
             return   res.render('sign/login', {
@@ -31,7 +31,7 @@ router.post("/", function (req, res) {
             })
         }
 
-        if(user.user_mail==email && user.user_pass==password){
+        if(user.user_mail===email && user.user_pass===password){
                 req.session.userId = user._id;
                 console.log(req.session.userId);
                 res.redirect("/index");

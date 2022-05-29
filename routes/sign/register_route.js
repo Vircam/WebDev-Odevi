@@ -5,9 +5,9 @@ const router = express.Router();
 
 // Showing register form
 router.get("/", function (req, res) {
-    if(req.session.userId){
+    if (req.session.userId) {
         return res.redirect("/index");
-     }
+    }
     res.render('sign/register', {
         title: 'Registration Page',
         name: '',
@@ -16,20 +16,22 @@ router.get("/", function (req, res) {
     })
 });
 router.post("/", function (req, res) {
-    var email = req.body.email
-    var name = req.body.name
-    var password = req.body.password
-    User.createData(name,email, password, function (err, user) {
-            if (err) {
-                console.log(err);
-                return res.render("sign/register");
-            }
-            passport.authenticate("local")(
-                req, res, function () {
-                    req.flash('success', 'You have logged in')
-                    res.render("index");
-                });
-        });
+    const email = req.body.email, name = req.body.name, password = req.body.password;
+    User.createData(email, name, password, function (err, user) {
+        if (!user) {
+            console.log("My Error:"+err.toString());
+            return res.render('sign/register', {
+                title: 'Registration Page',
+                name: '',
+                email: '',
+                password: ''
+            })
+        }
+        req.session.userId = user._id;
+        if (req.session.userId) {
+            return res.redirect("/index");
+        }
+    });
 });
 
 module.exports = router;
