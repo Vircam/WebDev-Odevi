@@ -1,14 +1,4 @@
-function warning(){
-    if (confirm("Your answers will be send, are you sure?")){
-        window.location.href = "index.html";
-    }
-}
-
-function bgChanger(id){
-    document.getElementById(id).style.backgroundColor = "lightblue";
-}
-
-function sendAnswers(){
+function sendAnswersEng(){
     var select1 = document.getElementById("q1")
     var value1 = select1.options[select1.selectedIndex].value;
     var select2 = document.getElementById("q2")

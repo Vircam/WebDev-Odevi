@@ -1,161 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+<% var engSoru;%>
+<% sorular.user_test.forEach(function (value) { if(value.test_catid=="0") engSoru=value } )%>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Test</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="/javascripts/EnglishTest.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="/javascripts/eng_test.js"></script>
+    <script src="/javascripts/sender_script.js" type="text/javascript">
+    </script>
+    <script>
+        countDownTimer('<%= engSoru.test_baslangic%>','<%= engSoru.test_bitis%>',"/engtest",'<%= engSoru._id%>','<%= engSoru.is_test_done%>',"eng");
+    </script>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" href="images/mat_images/rainbow.png">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <div class="container">
-            <a href="index" class="navbar-brand">Anasayfa</a>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Matematik
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="mat1">1. Ünite - Doğal Sayılar</a></li>
-                  <li><a class="dropdown-item" href="mat2">2. Ünite - Toplama ve Çıkarma İşlemleri</a></li>
-                  <li><a class="dropdown-item" href="mat3">3. Ünite - Çarpma ve Bölme İşlemleri</a></li>
-                  <li><a class="dropdown-item" href="mattest">Matematik Sınavı</a></li>
-                </ul>
-            </div>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Fen Bilimleri
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="fen1">1. Ünite - Yer Kabuğu ve Dünyamızın Hareketleri</a></li>
-                  <li><a class="dropdown-item" href="fen2">2. Ünite - Besinlerimiz, Canlılar ve Yaşam</a></li>
-                  <li><a class="dropdown-item" href="fen3">3. Ünite - Kuvvetin Etkileri ve Fiziksel Olaylar</a></li>
-                  <li><a class="dropdown-item" href="fentest">Fen Bilimleri Sınavı</a></li>
-                </ul>
-            </div>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  English
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="eng1">Unit-1 Classroom Rules</a></li>
-                  <li><a class="dropdown-item" href="eng2">Unit-2 Nationality</a></li>
-                  <li><a class="dropdown-item" href="eng3">Unit-3 Cartoon Characters</a></li>
-                  <li><a class="dropdown-item" href="engtest">English Exam</a></li>
-                </ul>
-            </div>
-            <div>
-                <button type="button" class="btn btn-warning">Kayıt Ol</button>
-                <button type="button" class="btn btn-success">Giriş Yap</button>
-            </div>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container">
+        <a href="index" class="navbar-brand">Anasayfa</a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                Matematik
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="mat1">1. Ünite - Doğal Sayılar</a></li>
+                <li><a class="dropdown-item" href="mat2">2. Ünite - Toplama ve Çıkarma İşlemleri</a></li>
+                <li><a class="dropdown-item" href="mat3">3. Ünite - Çarpma ve Bölme İşlemleri</a></li>
+                <li><a class="dropdown-item" href="mattest">Matematik Sınavı</a></li>
+            </ul>
         </div>
-    </nav>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                Fen Bilimleri
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="fen1">1. Ünite - Yer Kabuğu ve Dünyamızın Hareketleri</a></li>
+                <li><a class="dropdown-item" href="fen2">2. Ünite - Besinlerimiz, Canlılar ve Yaşam</a></li>
+                <li><a class="dropdown-item" href="fen3">3. Ünite - Kuvvetin Etkileri ve Fiziksel Olaylar</a></li>
+                <li><a class="dropdown-item" href="fentest">Fen Bilimleri Sınavı</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                English
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="eng1">Unit-1 Classroom Rules</a></li>
+                <li><a class="dropdown-item" href="eng2">Unit-2 Nationality</a></li>
+                <li><a class="dropdown-item" href="eng3">Unit-3 Cartoon Characters</a></li>
+                <li><a class="dropdown-item" href="engtest">English Exam</a></li>
+            </ul>
+        </div>
+        <div>
+            <button type="button" class="btn btn-warning">Kayıt Ol</button>
+            <button type="button" class="btn btn-success">Giriş Yap</button>
+        </div>
+    </div>
+</nav>
+<div>
+    <h1 class="center">English Test</h1>
+    <p class="center"><b>Select the correct options according to questions.</b></p>
+</div>
+<div class="child" onclick="sendAnswersEng()">
     <div>
-        <h1 class="center">English Test</h1>
-        <p class="center"><b>Select the correct options according to questions.</b></p>
+        <p id="question1"><b>Question 1: </b>Which is not a right thing to do in classroom?</p>
+        <select class="form-control" style="width:auto; display: inline;" name="" id="q1" onchange="bgChanger('lq1')">
+            <option hidden disabled selected value>--select an option--</option>
+            <option <%- engSoru.test_answers.soru1==='a' ? 'selected' : '' %> value="a">Listen to your teacher.</option>
+            <option <%- engSoru.test_answers.soru1==='b' ? 'selected' : '' %> value="b">Raise your hand to speak.</option>
+            <option <%- engSoru.test_answers.soru1==='c' ? 'selected' : '' %> value="c">Eating in the classroom.</option>
+            <option <%- engSoru.test_answers.soru1==='d' ? 'selected' : '' %> value="d">Going to school in time.</option>
+        </select>
     </div>
-    <div class="child" onclick="sendAnswers()">
-        <div>
-            <p id="question1"><b>Question 1: </b>Which is not a right thing to do in classroom?</p>
-            <select class="form-control" style="width:auto; display: inline;" name="" id="q1" onchange="bgChanger('lq1')"><option hidden disabled selected value>--select an option--</option>
-                <option value="a">Listen to your teacher.</option>
-                <option value="b">Raise your hand to speak.</option>
-                <option value="c">Eating in the classroom.</option>
-                <option value="d">Going to school in time.</option>
-            </select>
-        </div>
-        <div>
-            <p id="question2"><b>Question 2: </b>Fill in the blank.</p>
-            <p>May I read your <select class="form-control" style="width:auto; display: inline;" name="" id="q2" onchange="bgChanger('lq2')">
-                <option hidden disabled selected value>--select an option--</option>
-                <option value="a">sandwich</option>
-                <option value="b">bicycle</option>
-                <option value="c">book</option>
-                <option value="d">door</option>
-            </select>?</p>
-        </div>
-        <p id="question3"><b>Question 3: </b>Match the number.</p>
-        <p>thirty-three <select class="form-control" style="width:auto; display: inline;" name="" id="q3" onchange="bgChanger('lq3')"><option hidden disabled selected value>--select an option--</option>
-            <option value="a">13</option>
-            <option value="b">33</option>
-            <option value="c">32</option>
-            <option value="d">31</option>
+    <div>
+        <p id="question2"><b>Question 2: </b>Fill in the blank.</p>
+        <p>May I read your <select class="form-control" style="width:auto; display: inline;" name="" id="q2"
+                                   onchange="bgChanger('lq2')">
+                <option   hidden disabled selected value>--select an option--</option>
+                <option <%- engSoru.test_answers.soru2==='a' ? 'selected' : '' %> value="a" >sandwich</option>
+                <option <%- engSoru.test_answers.soru2==='b' ? 'selected' : '' %> value="b">bicycle</option>
+                <option <%- engSoru.test_answers.soru2==='c' ? 'selected' : '' %> value="c">book</option>
+                <option <%- engSoru.test_answers.soru2==='d' ? 'selected' : '' %> value="d">door</option>
+            </select>?
+        </p>
+    </div>
+    <p id="question3"><b>Question 3: </b>Match the number.</p>
+    <p>thirty-three <select class="form-control" style="width:auto; display: inline;" name="" id="q3"
+                            onchange="bgChanger('lq3')">
+            <option   hidden disabled selected value>--select an option--</option>
+            <option <%- engSoru.test_answers.soru3==='a' ? 'selected' : '' %> value="a">13</option>
+            <option <%- engSoru.test_answers.soru3==='b' ? 'selected' : '' %> value="b">33</option>
+            <option <%- engSoru.test_answers.soru3==='c' ? 'selected' : '' %> value="c">32</option>
+            <option <%- engSoru.test_answers.soru3==='d' ? 'selected' : '' %> value="d">31</option>
         </select></p>
-        <p id="question4"><b>Question 4: </b>Read and select the correct word.</p>
-        <p>Hi, <select class="form-control" style="width:auto; display: inline;" name="" id="q4" onchange="bgChanger('lq4')">
-            <option hidden disabled selected value>--select an option--</option>
-            <option value="a">her</option>
-            <option value="b">my</option>
-            <option value="c">your</option>
-            <option value="d">their</option>
-        </select> name is Linda</p>
-        <p id="question5"><b>Question 5: </b>Read and select the correct word.</p>
-        <p>Birds can <select class="form-control" style="width:auto; display: inline;" name="" id="q5" onchange="bgChanger('lq5')">
-            <option hidden disabled selected value>--select an option--</option>
-            <option value="a">fly</option>
-            <option value="b">swim</option>
-            <option value="c">paint</option>
-            <option value="d">take pictures</option>
+    <p id="question4"><b>Question 4: </b>Read and select the correct word.</p>
+    <p>Hi, <select class="form-control" style="width:auto; display: inline;" name="" id="q4"
+                   onchange="bgChanger('lq4')">
+            <option   hidden disabled selected value>--select an option--</option>
+            <option <%- engSoru.test_answers.soru4==='a' ? 'selected' : '' %> value="a">her</option>
+            <option <%- engSoru.test_answers.soru4==='b' ? 'selected' : '' %> value="b">my</option>
+            <option <%- engSoru.test_answers.soru4==='c' ? 'selected' : '' %> value="c">your</option>
+            <option <%- engSoru.test_answers.soru4==='d' ? 'selected' : '' %> value="d">their</option>
+        </select> name is Linda
+    </p>
+    <p id="question5"><b>Question 5: </b>Read and select the correct word.</p>
+    <p>Birds can <select class="form-control" style="width:auto; display: inline;" name="" id="q5"
+                         onchange="bgChanger('lq5')">
+            <option   hidden disabled selected value>--select an option--</option>
+            <option <%- engSoru.test_answers.soru5==='a' ? 'selected' : '' %> value="a">fly</option>
+            <option <%- engSoru.test_answers.soru5==='b' ? 'selected' : '' %> value="b">swim</option>
+            <option <%- engSoru.test_answers.soru5==='c' ? 'selected' : '' %> value="c">paint</option>
+            <option <%- engSoru.test_answers.soru5==='d' ? 'selected' : '' %> value="d">take pictures</option>
         </select>
-        .</p>
-        <p id="question6"><b>Question 6: </b>Fill in the blank.</p>
-        <p>twenty - forty - sixty - <input type="text" id="q6" onchange="bgChanger('lq6')"></p>
-        <p id="question7"><b>Question 7: </b>Select the right language.</p>
-        <p>Japanese people talk <select class="form-control" style="width:auto; display: inline;" name="" id="q7" onchange="bgChanger('lq7')">
-            <option hidden disabled selected value>--select an option--</option>
-            <option value="a">Russian</option>
-            <option value="b">Turkish</option>
-            <option value="c">Spanish</option>
-            <option value="d">Japanese</option>
-        </select>.</p>
-        <p id="question8"><b>Question 8: </b>Select the right answer.</p>
-        <p class="center">30 + 12 = ?</p>
-        <select class="form-control" style="width:auto; display: inline;" name="" id="q8" onchange="bgChanger('lq8')">
-            <option hidden disabled selected value>--select an option--</option>
-            <option value="a">fifty-two</option>
-            <option value="b">sixty-two</option>
-            <option value="c">thirty-two</option>
-            <option value="d">forty-two</option>
-        </select>
-        <p id="question9"><b>Question 9: </b>Fill in the blank.</p>
-        <p class="center"><b>...?...</b> you like dancing?</p>
-        <select class="form-control" style="width:auto; display: inline;" name="" id="q9" onchange="bgChanger('lq9')">
-            <option hidden disabled selected value>--select an option--</option>
-            <option value="a">Can</option>
-            <option value="b">Do</option>
-            <option value="c">Are</option>
-            <option value="d">Is</option>
-        </select>
-        <p id="question10"><b>Question 10: </b>Fill in the blank.</p>
-        <p>-Do you like dancing?<br>-Yes, <b>...?...</b></p>
-        <select class="form-control" style="width:auto; display: inline;" name="" id="q10" onchange="bgChanger('lq10')">
-            <option hidden disabled selected value>--select an option--</option>
-            <option value="a">I do</option>
-            <option value="b">I can</option>
-            <option value="c">I am</option>
-            <option value="d">I don't</option>
-        </select>
-    </div>
-    <div class="sidebar">
-        <ul class="verticalCenter">
-            <li id="lq1"><a href="#question1">Question 1</a></li>
-            <li id="lq2"><a href="#question2">Question 2</a></li>
-            <li id="lq3"><a href="#question3">Question 3</a></li>
-            <li id="lq4"><a href="#question4">Question 4</a></li>
-            <li id="lq5"><a href="#question5">Question 5</a></li>
-            <li id="lq6"><a href="#question6">Question 6</a></li>
-            <li id="lq7"><a href="#question7">Question 7</a></li>
-            <li id="lq8"><a href="#question8">Question 8</a></li>
-            <li id="lq9"><a href="#question9">Question 9</a></li>
-            <li id="lq10"><a href="#question10">Question 10</a></li>
-        </ul>        
-    </div>
-    <div class="parent">
-        <a href="index" class="btn btn-dark" role="button" onclick="warning()">Finish the Exam</a>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        .
+    </p>
+    <p id="question6"><b>Question 6: </b>Fill in the blank.</p>
+    <p>twenty - forty - sixty - <input type="text"  value='<%- engSoru.test_answers.soru6%>' id="q6" onchange="bgChanger('lq6')"></p>
+    <p id="question7"><b>Question 7: </b>Select the right language.</p>
+    <p>Japanese people talk <select class="form-control" style="width:auto; display: inline;" name="" id="q7"
+                                    onchange="bgChanger('lq7')">
+            <option   hidden disabled selected value>--select an option--</option>
+            <option <%- engSoru.test_answers.soru7==='a' ? 'selected' : '' %> value="a">Russian</option>
+            <option <%- engSoru.test_answers.soru7==='b' ? 'selected' : '' %> value="b">Turkish</option>
+            <option <%- engSoru.test_answers.soru7==='c' ? 'selected' : '' %> value="c">Spanish</option>
+            <option <%- engSoru.test_answers.soru7==='d' ? 'selected' : '' %> value="d">Japanese</option>
+        </select>.
+    </p>
+    <p id="question8"><b>Question 8: </b>Select the right answer.</p>
+    <p class="center">30 + 12 = ?</p>
+    <select class="form-control" style="width:auto; display: inline;" name="" id="q8" onchange="bgChanger('lq8')">
+        <option   hidden disabled selected value>--select an option--</option>
+        <option <%- engSoru.test_answers.soru8==='a' ? 'selected' : '' %> value="a">fifty-two</option>
+        <option <%- engSoru.test_answers.soru8==='b' ? 'selected' : '' %> value="b">sixty-two</option>
+        <option <%- engSoru.test_answers.soru8==='c' ? 'selected' : '' %> value="c">thirty-two</option>
+        <option <%- engSoru.test_answers.soru8==='d' ? 'selected' : '' %> value="d">forty-two</option>
+    </select>
+    <p id="question9"><b>Question 9: </b>Fill in the blank.</p>
+    <p class="center"><b>...?...</b> you like dancing?</p>
+    <select class="form-control" style="width:auto; display: inline;" name="" id="q9" onchange="bgChanger('lq9')">
+        <option   hidden disabled selected value>--select an option--</option>
+        <option <%- engSoru.test_answers.soru9==='a' ? 'selected' : '' %> value="a">Can</option>
+        <option <%- engSoru.test_answers.soru9==='b' ? 'selected' : '' %> value="b">Do</option>
+        <option <%- engSoru.test_answers.soru9==='c' ? 'selected' : '' %> value="c">Are</option>
+        <option <%- engSoru.test_answers.soru9==='d' ? 'selected' : '' %> value="d">Is</option>
+    </select>
+    <p id="question10"><b>Question 10: </b>Fill in the blank.</p>
+    <p>-Do you like dancing?<br>-Yes, <b>...?...</b></p>
+    <select class="form-control" style="width:auto; display: inline;" name="" id="q10" onchange="bgChanger('lq10')">
+        <option  hidden disabled selected value>--select an option--</option>
+        <option <%- engSoru.test_answers.soru10==='a' ? 'selected' : '' %> value="a">I do</option>
+        <option <%- engSoru.test_answers.soru10==='b' ? 'selected' : '' %> value="b">I can</option>
+        <option <%- engSoru.test_answers.soru10==='c' ? 'selected' : '' %> value="c">I am</option>
+        <option <%- engSoru.test_answers.soru10==='d' ? 'selected' : '' %> value="d">I don't</option>
+    </select>
+</div>
+<div class="sidebar">
+    <ul class="verticalCenter">
+        <p id="timer"></p>
+        <li id="lq1"><a href="#question1">Question 1</a></li>
+        <li id="lq2"><a href="#question2">Question 2</a></li>
+        <li id="lq3"><a href="#question3">Question 3</a></li>
+        <li id="lq4"><a href="#question4">Question 4</a></li>
+        <li id="lq5"><a href="#question5">Question 5</a></li>
+        <li id="lq6"><a href="#question6">Question 6</a></li>
+        <li id="lq7"><a href="#question7">Question 7</a></li>
+        <li id="lq8"><a href="#question8">Question 8</a></li>
+        <li id="lq9"><a href="#question9">Question 9</a></li>
+        <li id="lq10"><a href="#question10">Question 10</a></li>
+    </ul>
+</div>
+<div class="parent">
+
+    <a href="#" class="btn btn-dark" role="button"<%= parseInt(engSoru.test_baslangic)-parseInt(engSoru.test_bitis)>0?'hidden':''%>
+       onclick="uyari('<%= engSoru.test_baslangic %>','<%= engSoru.test_bitis %>','/engtest','<%= engSoru._id %>','eng')">Finish
+        the Exam</a>
+    
+    <a href="#" class="btn btn-dark" role="button"  <%= parseInt(engSoru.test_baslangic)-parseInt(engSoru.test_bitis)<0?'hidden':''%>
+       onclick="uyari('<%= engSoru.test_baslangic %>','<%= engSoru.test_bitis %>','/engtest','<%= engSoru._id %>','eng')">Table
+        of Point</a>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 </html>
