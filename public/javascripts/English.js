@@ -1032,3 +1032,264 @@ function practice27(id){
         }
     }   
 }
+
+function practice31(id){
+    var select1 = document.getElementById("s11")
+    var value1 = select1.options[select1.selectedIndex].value;
+
+    if (id == "s11")
+    {
+        if (value1 == "football"){
+            document.getElementById("p11").innerHTML = "Correct";
+            document.getElementById("p11").style.color = "green";
+        }
+        else{
+            document.getElementById("p11").innerHTML = "Incorrect";
+            document.getElementById("p11").style.color = "red";
+        }
+    }
+}
+
+function practice32(id){
+    var select1 = document.getElementById("s21")
+    var value1 = select1.options[select1.selectedIndex].value;
+    var select2 = document.getElementById("s22")
+    var value2 = select2.options[select2.selectedIndex].value;
+    var select3 = document.getElementById("s23")
+    var value3 = select3.options[select3.selectedIndex].value;
+    var select4 = document.getElementById("s24")
+    var value4 = select4.options[select4.selectedIndex].value;
+    var select5 = document.getElementById("s25")
+    var value5 = select5.options[select5.selectedIndex].value;
+    var select6 = document.getElementById("s26")
+    var value6 = select6.options[select6.selectedIndex].value;
+    var select7 = document.getElementById("s27")
+    var value7 = select7.options[select7.selectedIndex].value;
+    var select8 = document.getElementById("s28")
+    var value8 = select8.options[select8.selectedIndex].value;
+    var select9 = document.getElementById("s29")
+    var value9 = select9.options[select9.selectedIndex].value;
+
+    if (id == "s21")
+    {
+        if (value1 == "my"){
+            document.getElementById("p21").innerHTML = "Correct";
+            document.getElementById("p21").style.color = "green";
+        }
+        else{
+            document.getElementById("p21").innerHTML = "Incorrect";
+            document.getElementById("p21").style.color = "red";
+        }
+    }
+
+    if (id == "s22")
+    {
+        if (value2 == "my"){
+            document.getElementById("p22").innerHTML = "Correct";
+            document.getElementById("p22").style.color = "green";
+        }
+        else{
+            document.getElementById("p22").innerHTML = "Incorrect";
+            document.getElementById("p22").style.color = "red";
+        }
+    }
+
+    if (id == "s23")
+    {
+        if (value3 == "my"){
+            document.getElementById("p23").innerHTML = "Correct";
+            document.getElementById("p23").style.color = "green";
+        }
+        else{
+            document.getElementById("p23").innerHTML = "Incorrect";
+            document.getElementById("p23").style.color = "red";
+        }
+    }
+
+    if (id == "s24")
+    {
+        if (value4 == "her"){
+            document.getElementById("p24").innerHTML = "Correct";
+            document.getElementById("p24").style.color = "green";
+        }
+        else{
+            document.getElementById("p24").innerHTML = "Incorrect";
+            document.getElementById("p24").style.color = "red";
+        }
+    }
+
+    if (id == "s25")
+    {
+        if (value5 == "my"){
+            document.getElementById("p25").innerHTML = "Correct";
+            document.getElementById("p25").style.color = "green";
+        }
+        else{
+            document.getElementById("p25").innerHTML = "Incorrect";
+            document.getElementById("p25").style.color = "red";
+        }
+    }
+
+    if (id == "s26")
+    {
+        if (value6 == "our"){
+            document.getElementById("p26").innerHTML = "Correct";
+            document.getElementById("p26").style.color = "green";
+        }
+        else{
+            document.getElementById("p26").innerHTML = "Incorrect";
+            document.getElementById("p26").style.color = "red";
+        }
+    }
+    
+    if (id == "s27")
+    {
+        if (value7 == "his"){
+            document.getElementById("p27").innerHTML = "Correct";
+            document.getElementById("p27").style.color = "green";
+        }
+        else{
+            document.getElementById("p27").innerHTML = "Incorrect";
+            document.getElementById("p27").style.color = "red";
+        }
+    }
+
+    if (id == "s28")
+    {
+        if (value8 == "our"){
+            document.getElementById("p28").innerHTML = "Correct";
+            document.getElementById("p28").style.color = "green";
+        }
+        else{
+            document.getElementById("p28").innerHTML = "Incorrect";
+            document.getElementById("p28").style.color = "red";
+        }
+    }
+
+    if (id == "s29")
+    {
+        if (value9 == "Our"){
+            document.getElementById("p29").innerHTML = "Correct";
+            document.getElementById("p29").style.color = "green";
+        }
+        else{
+            document.getElementById("p29").innerHTML = "Incorrect";
+            document.getElementById("p29").style.color = "red";
+        }
+    }
+}
+
+function practice33(id){
+    var select1 = document.getElementById("s31")
+    var value1 = select1.options[select1.selectedIndex].value;
+    var select2 = document.getElementById("s32")
+    var value2 = select2.options[select2.selectedIndex].value;
+    var select3 = document.getElementById("s33")
+    var value3 = select3.options[select3.selectedIndex].value;
+    var select4 = document.getElementById("s34")
+    var value4 = select4.options[select4.selectedIndex].value;
+    var select5 = document.getElementById("s35")
+    var value5 = select5.options[select5.selectedIndex].value;
+    var select6 = document.getElementById("s36")
+    var value6 = select6.options[select6.selectedIndex].value;
+    var select7 = document.getElementById("s37")
+    var value7 = select7.options[select7.selectedIndex].value;
+    var select8 = document.getElementById("s38")
+    var value8 = select8.options[select8.selectedIndex].value;
+
+    if (id == "s31")
+    {
+        if (value1 == "can"){
+            document.getElementById("p31").innerHTML = "Correct";
+            document.getElementById("p31").style.color = "green";
+        }
+        else{
+            document.getElementById("p31").innerHTML = "Incorrect";
+            document.getElementById("p31").style.color = "red";
+        }
+    }
+
+    if (id == "s32")
+    {
+        if (value2 == "can"){
+            document.getElementById("p32").innerHTML = "Correct";
+            document.getElementById("p32").style.color = "green";
+        }
+        else{
+            document.getElementById("p32").innerHTML = "Incorrect";
+            document.getElementById("p32").style.color = "red";
+        }
+    }
+
+    if (id == "s33")
+    {
+        if (value3 == "can't"){
+            document.getElementById("p33").innerHTML = "Correct";
+            document.getElementById("p33").style.color = "green";
+        }
+        else{
+            document.getElementById("p33").innerHTML = "Incorrect";
+            document.getElementById("p33").style.color = "red";
+        }
+    }
+
+    if (id == "s34")
+    {
+        if (value4 == "can't"){
+            document.getElementById("p34").innerHTML = "Correct";
+            document.getElementById("p34").style.color = "green";
+        }
+        else{
+            document.getElementById("p34").innerHTML = "Incorrect";
+            document.getElementById("p34").style.color = "red";
+        }
+    }
+
+    if (id == "s35")
+    {
+        if (value5 == "can"){
+            document.getElementById("p35").innerHTML = "Correct";
+            document.getElementById("p35").style.color = "green";
+        }
+        else{
+            document.getElementById("p35").innerHTML = "Incorrect";
+            document.getElementById("p35").style.color = "red";
+        }
+    }
+
+    if (id == "s36")
+    {
+        if (value6 == "can"){
+            document.getElementById("p36").innerHTML = "Correct";
+            document.getElementById("p36").style.color = "green";
+        }
+        else{
+            document.getElementById("p36").innerHTML = "Incorrect";
+            document.getElementById("p36").style.color = "red";
+        }
+    }
+    
+    if (id == "s37")
+    {
+        if (value7 == "can"){
+            document.getElementById("p37").innerHTML = "Correct";
+            document.getElementById("p37").style.color = "green";
+        }
+        else{
+            document.getElementById("p37").innerHTML = "Incorrect";
+            document.getElementById("p37").style.color = "red";
+        }
+    }
+
+    if (id == "s38")
+    {
+        if (value8 == "can"){
+            document.getElementById("p38").innerHTML = "Correct";
+            document.getElementById("p38").style.color = "green";
+        }
+        else{
+            document.getElementById("p38").innerHTML = "Incorrect";
+            document.getElementById("p38").style.color = "red";
+        }
+    }
+}
