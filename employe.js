@@ -10,6 +10,7 @@ const indexRouter = require('./routes/index_router');
 const signRouter = require('./routes/sign/home_router');
 const loginRouter = require('./routes/sign/login_route');
 const registerRouter = require('./routes/sign/register_route');
+const puanRouter = require('./routes/sign/puan_router');
 const eng1Router = require('./routes/english/eng1_router');
 const eng2Router = require('./routes/english/eng2_router');
 const eng3Router = require('./routes/english/eng3_router');
@@ -33,6 +34,7 @@ module.exports = {
     session,
     bodyParser,
     logger,
+    puanRouter,
     loginRouter,
     indexRouter,
     eng1Router,
