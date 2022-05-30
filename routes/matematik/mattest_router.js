@@ -5,7 +5,6 @@ var userData = require('../../models/user_model')
 /* GET home page. */
 router.get('/', function (req, res) {
   userData.fetchData(req.session.userId,function (data) {
-
     return res.render('matematik/mat_test', {title: 'Fen Bilgisi Test Soruları', sorular: data});
  })
 });

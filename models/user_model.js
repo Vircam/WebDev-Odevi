@@ -10,17 +10,18 @@ let userSchema = new Schema({
         is_test_done: false,
         test_baslangic: 0,
         test_bitis: 0,
+        test_sure: String,
         test_answers: {
-            soru1: "",
-            soru2: "",
-            soru3: "",
-            soru4: "",
-            soru5: "",
-            soru6: "",
-            soru7: "",
-            soru8: "",
-            soru9: "",
-            soru10: "",
+            soru1: String,
+            soru2: String,
+            soru3: String,
+            soru4: String,
+            soru5: String,
+            soru6: String,
+            soru7: String,
+            soru8: String,
+            soru9: String,
+            soru10:String,
         }
     }],
 });
@@ -36,6 +37,7 @@ module.exports = {
                 is_test_done: false,
                 test_baslangic: 0,
                 test_bitis: 0,
+                test_sure: "0",
                 test_answers: {
                     soru1: "",
                     soru2: "",
@@ -53,6 +55,7 @@ module.exports = {
                 is_test_done: false,
                 test_baslangic: 0,
                 test_bitis: 0,
+                test_sure: "0",
                 test_answers: {
                     soru1: "",
                     soru2: "",
@@ -70,6 +73,7 @@ module.exports = {
                 is_test_done: false,
                 test_baslangic: 0,
                 test_bitis: 0,
+                test_sure: "0",
                 test_answers: {
                     soru1: "",
                     soru2: "",
@@ -110,6 +114,7 @@ module.exports = {
         userTable.updateOne({"_id": user_id, "user_test.test_catid": body.test_catid}, {
             $set: {
                 "user_test.$.is_test_done": body.is_test_done,
+                "user_test.$.test_sure": body.test_sure,
                 "user_test.$.test_baslangic": body.test_baslangic,
                 "user_test.$.test_bitis": body.test_bitis,
                 "user_test.$.test_answers.soru1": body.test_answers.soru1,

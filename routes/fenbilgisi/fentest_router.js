@@ -1,5 +1,4 @@
 var express = require('express');
-var fenTestData = require('../../models/fen_model')
 var userData = require('../../models/user_model')
 var router = express.Router();
 router.get('/', async function (req, res, ) {

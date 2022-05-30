@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<% var matSoru;%>
-<% sorular.user_test.forEach(function (value) { if(value.test_catid==="2") matSoru=value } )%>
+<% var matSoru; %>
+<% var matSoruData=[]; %>
+<% sorular.user_test.forEach(function (value) {if (value.test_catid === "2")   matSoru = value}) %>
+<% sorular.user_test.forEach(function (value) {value._id=undefined; matSoruData.push(value)}) %>
 
 <head>
     <meta charset="UTF-8">
@@ -12,13 +14,15 @@
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" href="mat_images/rainbow.png">
-    <script src="/javascripts/mat_test.js" type="text/javascript">
-    <script src="/javascripts/sender_script.js" type="text/javascript">
-    </script>
+    <script src="/javascripts/mat_test.js" type="text/javascript"></script>
+    <script src="/javascripts/sender_script.js" type="text/javascript"></script>
     <script>
-        const values=sendAnswersMat();
-        countDownTimer('<%= matSoru.test_baslangic%>','<%= matSoru.test_bitis%>',"/mattest",'<%= matSoru._id%>','<%= matSoru.is_test_done%>',values);
+        function f() {
+            sendPuan(<%- JSON.stringify(sorular)%>)
+        }
+        countDownTimer('<%= matSoru.test_baslangic %>', '<%= matSoru.test_bitis %>', "/mattest", '<%= matSoru._id %>', '<%= matSoru.is_test_done %>', "mat");
     </script>
+
 </head>
 
 <body>
@@ -73,27 +77,27 @@
         kaçtır?</p>
     <select class="form-control" style="width:auto;" name="question1" id="question1" onclick=""
             onchange="bgChanger('q1')">
-        <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
-        <option <%- matSoru.test_answers.soru1==='25' ? 'selected' : '' %> value="25">25</option>
-        <option <%- matSoru.test_answers.soru1==='26' ? 'selected' : '' %> value="26">26</option>
-        <option <%- matSoru.test_answers.soru1==='27' ? 'selected' : '' %> value="27">27</option>
-        <option <%- matSoru.test_answers.soru1==='28' ? 'selected' : '' %> value="28">28</option>
+        <option hidden disabled selected value> -- bir şıkkı seçiniz --</option>
+        <option <%- matSoru.test_answers.soru1 === '25' ? 'selected' : '' %> value="25">25</option>
+        <option <%- matSoru.test_answers.soru1 === '26' ? 'selected' : '' %> value="26">26</option>
+        <option <%- matSoru.test_answers.soru1 === '27' ? 'selected' : '' %> value="27">27</option>
+        <option <%- matSoru.test_answers.soru1 === '28' ? 'selected' : '' %> value="28">28</option>
     </select>
 
     <p id="soru2"><b>Soru 2: </b>"43732" sayısındaki "3" rakamının basamak değerleri toplamı kaçtır?</p>
     <select class="form-control" style="width:auto;" name="guestion2" id="question2" onclick=""
             onchange="bgChanger('q2')">
-        <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
-        <option <%- matSoru.test_answers.soru2==='1003' ? 'selected' : '' %> value="1003">1003</option>
-        <option <%- matSoru.test_answers.soru2==='6' ? 'selected' : '' %> value="6">6</option>
-        <option <%- matSoru.test_answers.soru2==='3030' ? 'selected' : '' %> value="3030">3030</option>
-        <option <%- matSoru.test_answers.soru2==='1030' ? 'selected' : '' %> value="1030">1030</option>
+        <option hidden disabled selected value> -- bir şıkkı seçiniz --</option>
+        <option <%- matSoru.test_answers.soru2 === '1003' ? 'selected' : '' %> value="1003">1003</option>
+        <option <%- matSoru.test_answers.soru2 === '6' ? 'selected' : '' %> value="6">6</option>
+        <option <%- matSoru.test_answers.soru2 === '3030' ? 'selected' : '' %> value="3030">3030</option>
+        <option <%- matSoru.test_answers.soru2 === '1030' ? 'selected' : '' %> value="1030">1030</option>
     </select>
     <p id="soru3"><b>Soru 3: </b>En küçüğü <b>20</b> olan <b>ardışık üç doğal sayının</b> toplamı kaçtır?</p>
-    <input type="number" value='<%= matSoru.test_answers.soru3%>' name="guestion3" id="question3"
+    <input type="number" value='<%= matSoru.test_answers.soru3 %>' name="guestion3" id="question3"
            onchange="bgChanger('q3')">
     <p id="soru4"><b>Soru 4: </b>Aşağıdaki tablodaki rakamları birer kez kullanılarak, okunuşları verilen sayılardan
-        <b>kaç tanesi oluşturulabilir <%= matSoru.test_answers.soru1%></b>?
+        <b>kaç tanesi oluşturulabilir <%= matSoru.test_answers.soru1 %></b>?
     </p>
     <table class="table table-success table-striped" style="width:auto;">
         <tr>
@@ -112,13 +116,13 @@
         <li>Üç yüz dört bin yedi yüz on altı</li>
         <li>Üç yüz dört bin yedi yüz altı</li>
     </ol>
-    <select class="form-control" value='<%= matSoru.test_answers.soru4%>' style="width:auto;"
+    <select class="form-control" value='<%= matSoru.test_answers.soru4 %>' style="width:auto;"
             name="question4" id="question4" onchange="bgChanger('q4')">
-        <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
-        <option <%- matSoru.test_answers.soru4==='1' ? 'selected' : '' %> value="1">1</option>
-        <option <%- matSoru.test_answers.soru4==='2' ? 'selected' : '' %> value="2">2</option>
-        <option <%- matSoru.test_answers.soru4==='3' ? 'selected' : '' %> value="3">3</option>
-        <option <%- matSoru.test_answers.soru4==='4' ? 'selected' : '' %> value="4">4</option>
+        <option hidden disabled selected value> -- bir şıkkı seçiniz --</option>
+        <option <%- matSoru.test_answers.soru4 === '1' ? 'selected' : '' %> value="1">1</option>
+        <option <%- matSoru.test_answers.soru4 === '2' ? 'selected' : '' %> value="2">2</option>
+        <option <%- matSoru.test_answers.soru4 === '3' ? 'selected' : '' %> value="3">3</option>
+        <option <%- matSoru.test_answers.soru4 === '4' ? 'selected' : '' %> value="4">4</option>
     </select>
     <p id="soru5"><b>Soru 5: </b>Aşağıdaki örüntüde "?" olan yere hangi sayı gelmelidir?</p>
     <table class="table table-success table-striped" style="width:auto;">
@@ -133,55 +137,55 @@
             <td>...?...</td>
         </tr>
     </table>
-    <select class="form-control" value='<%= matSoru.test_answers.soru5%>' style="width:auto;"
+    <select class="form-control" value='<%= matSoru.test_answers.soru5 %>' style="width:auto;"
             name="question5" id="question5" onchange="bgChanger('q5')">
-        <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
-        <option value="17" <%- matSoru.test_answers.soru5==='17' ? 'selected' : '' %>>17</option>
-        <option value="19" <%- matSoru.test_answers.soru5==='19' ? 'selected' : '' %>>19</option>
-        <option value="20" <%- matSoru.test_answers.soru5==='20' ? 'selected' : '' %>>20</option>
-        <option value="21" <%- matSoru.test_answers.soru5==='21' ? 'selected' : '' %>>21</option>
+        <option hidden disabled selected value> -- bir şıkkı seçiniz --</option>
+        <option value="17" <%- matSoru.test_answers.soru5 === '17' ? 'selected' : '' %>>17</option>
+        <option value="19" <%- matSoru.test_answers.soru5 === '19' ? 'selected' : '' %>>19</option>
+        <option value="20" <%- matSoru.test_answers.soru5 === '20' ? 'selected' : '' %>>20</option>
+        <option value="21" <%- matSoru.test_answers.soru5 === '21' ? 'selected' : '' %>>21</option>
     </select>
     <p id="soru6"><b>Soru 6: </b>Aşağıda verilen ifadeye göre "a" yerine <b>yazılabilecek rakamların</b> toplamı
         kaçtır?</p>
     <p class="center"><b>45a8 > 4548</b></p>
-    <select class="form-control" value='<%= matSoru.test_answers.soru6%>' style="width:auto;"
+    <select class="form-control" value='<%= matSoru.test_answers.soru6 %>' style="width:auto;"
             name="question6" id="question6" onchange="bgChanger('q6')">
-        <option hidden disabled selected value> -- bir şıkkı seçiniz -- </option>
-        <option value="21" <%- matSoru.test_answers.soru6==='21' ? 'selected' : '' %>>21</option>
-        <option value="14" <%- matSoru.test_answers.soru6==='14' ? 'selected' : '' %>>14</option>
-        <option value="35" <%- matSoru.test_answers.soru6==='35' ? 'selected' : '' %>>35</option>
-        <option value="30" <%- matSoru.test_answers.soru6==='30' ? 'selected' : '' %>>30</option>
+        <option hidden disabled selected value> -- bir şıkkı seçiniz --</option>
+        <option value="21" <%- matSoru.test_answers.soru6 === '21' ? 'selected' : '' %>>21</option>
+        <option value="14" <%- matSoru.test_answers.soru6 === '14' ? 'selected' : '' %>>14</option>
+        <option value="35" <%- matSoru.test_answers.soru6 === '35' ? 'selected' : '' %>>35</option>
+        <option value="30" <%- matSoru.test_answers.soru6 === '30' ? 'selected' : '' %>>30</option>
     </select>
     <p id="soru7"><b>Soru 7: </b>Aşağıdaki çarpma işlemine göre <b>M x N</b> işleminin sonucu kaçtır?</p>
     <p class="center">13 x M = 65 <br> 9 x N = 108</p>
-    <input type="number" value='<%= matSoru.test_answers.soru7%>' id="question7"
+    <input type="number" value='<%= matSoru.test_answers.soru7 %>' id="question7"
            onchange="bgChanger('q7')">
     <p id="soru8"><b>Soru 8: </b>Bir bölme işleminde <b>bölünen 367</b>, <b>bölüm 91</b>, ve <b>kalan 3</b> olduğuna
         göre <b>bölen sayı </b>kaçtır?</p>
-    <input type="number" value='<%= matSoru.test_answers.soru8%>' id="question8"
+    <input type="number" value='<%= matSoru.test_answers.soru8 %>' id="question8"
            onchange="bgChanger('q8')">
     <p id="soru9"><b>Soru 9: </b>Bir çıkarma işleminde eksilen, çıkan ve farkın toplamı 158 olduğuna göre <b>eksilen
             sayı</b> kaçtır?</p>
-    <select class="form-control" value='<%= matSoru.test_answers.soru9%>' style="width:auto;"
+    <select class="form-control" value='<%= matSoru.test_answers.soru9 %>' style="width:auto;"
             name="question9" id="question9" onchange="bgChanger('q9')">
-        <option hidden disabled value> -- bir şıkkı seçiniz -- </option>
-        <option value="68" <%- matSoru.test_answers.soru9==='68' ? 'selected' : '' %>>68</option>
-        <option value="69" <%- matSoru.test_answers.soru9==='69' ? 'selected' : '' %>>69</option>
-        <option value="78" <%- matSoru.test_answers.soru9==='78' ? 'selected' : '' %>>78</option>
-        <option value="79" <%- matSoru.test_answers.soru9==='79' ? 'selected' : '' %>>79</option>
+        <option hidden disabled value> -- bir şıkkı seçiniz --</option>
+        <option value="68" <%- matSoru.test_answers.soru9 === '68' ? 'selected' : '' %>>68</option>
+        <option value="69" <%- matSoru.test_answers.soru9 === '69' ? 'selected' : '' %>>69</option>
+        <option value="78" <%- matSoru.test_answers.soru9 === '78' ? 'selected' : '' %>>78</option>
+        <option value="79" <%- matSoru.test_answers.soru9 === '79' ? 'selected' : '' %>>79</option>
     </select>
     <p id="soru10"><b>Soru 10: </b>"8 yüz binlik + 7 on binlik + 3 yüzlük + 5 birlik" şeklinde çözümlenmiş sayı
         hangisidir?</p>
-    <select class="form-control" value='<%= matSoru.test_answers.soru10%>' style="width:auto;"
+    <select class="form-control" value='<%= matSoru.test_answers.soru10 %>' style="width:auto;"
             name="question10" id="question10" onchange="bgChanger('q10')">
-        <option hidden disabled value> -- bir şıkkı seçiniz -- </option>
-        <option value="870305" <%- matSoru.test_answers.soru10==='870305' ? 'selected' : '' %> >870305
+        <option hidden disabled value> -- bir şıkkı seçiniz --</option>
+        <option value="870305" <%- matSoru.test_answers.soru10 === '870305' ? 'selected' : '' %> >870305
         </option>
-        <option value="870350" <%- matSoru.test_answers.soru10==='870350' ? 'selected' : '' %>>870350
+        <option value="870350" <%- matSoru.test_answers.soru10 === '870350' ? 'selected' : '' %>>870350
         </option>
-        <option value="807305" <%- matSoru.test_answers.soru10==='807305' ? 'selected' : '' %>>807305
+        <option value="807305" <%- matSoru.test_answers.soru10 === '807305' ? 'selected' : '' %>>807305
         </option>
-        <option value="807350" <%- matSoru.test_answers.soru10==='807350' ? 'selected' : '' %>>807350
+        <option value="807350" <%- matSoru.test_answers.soru10 === '807350' ? 'selected' : '' %>>807350
         </option>
     </select>
 </div>
@@ -201,8 +205,13 @@
     </ul>
 </div>
 <div class="parent">
-    <a href="#" class="btn btn-dark" role="button" <%= matSoru.test_baslangic-matSoru.test_bitis?'hidden':''%> onclick="uyari('<%= matSoru.test_baslangic%>','<%= matSoru.test_bitis%>','/mattest','<%= matSoru._id%>',values)">Sınavı Bitir</a>
-    <a href="#" class="btn btn-dark" role="button" <%= matSoru.test_baslangic-matSoru.test_bitis?'':'hidden'%> onclick="uyari('<%= matSoru.test_baslangic%>','<%= matSoru.test_bitis%>','/mattest','<%= matSoru._id%>',values)">Puan Tablosu</a>
+    <a href="#" class="btn btn-dark"
+       role="button" <%= parseInt(matSoru.test_baslangic) - parseInt(matSoru.test_bitis) > 0 ? 'hidden' : '' %>
+       onclick="uyari('<%= matSoru.test_baslangic %>','<%= matSoru.test_bitis %>','/mattest','<%= matSoru._id %>','mat')">Sınavı
+        Bitir</a>
+    <a href="#" class="btn btn-dark"
+       role="button" <%= parseInt(matSoru.test_baslangic) - parseInt(matSoru.test_bitis) < 0 ? 'hidden' : '' %>
+       onclick="f()"> Puan Tablosu</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

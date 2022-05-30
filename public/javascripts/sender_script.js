@@ -8,6 +8,10 @@ function uyari(baslangicTime, bitisTime, path, id, which) {
     let value;
     if (which == "eng") {
         value = sendAnswersEng();
+    }else if(which == "fen"){
+        value = sendAnswersFen();
+    }else if(which == "mat"){
+        value = sendAnswersMat();
     }
     if (confirm("Cevaplarınız gönderilecek, emin misiniz?")) {
         console.log(countDownDate)
@@ -42,7 +46,7 @@ async function post(path, params, method = 'post') {
 
 function countDownTimer(baslangicTime, bitisTime, path, id, isDone, which) {
     console.log(isDone)
-    if (isDone==true) {
+    if (isDone==true||isDone=="true") {
         console.log("test bitti")
         return;
     }
@@ -60,13 +64,17 @@ function countDownTimer(baslangicTime, bitisTime, path, id, isDone, which) {
         let value;
         if (which == "eng") {
             value = sendAnswersEng();
+        }else if(which == "fen"){
+            value = sendAnswersFen();
+        }else if(which == "mat"){
+            value = sendAnswersMat();
         }
         document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
         if (seconds % 5 === 0) {
             post(path, {
                 id: id,
-                isDone: distance < 0,
-                test_sure: countDownDate,
+                isDone: false,
+                test_sure: minutes+":"+seconds,
                 baslangic: baslangicTime,
                 bitis: countDownDate,
                 soru1: value[0],
@@ -87,7 +95,7 @@ function countDownTimer(baslangicTime, bitisTime, path, id, isDone, which) {
             post(path, {
                 id: id,
                 isDone: true,
-                test_sure: countDownDate,
+                test_sure:  minutes+":"+seconds,
                 baslangic: baslangicTime,
                 bitis: countDownDate,
                 soru1: value[0],
@@ -107,4 +115,12 @@ function countDownTimer(baslangicTime, bitisTime, path, id, isDone, which) {
 
 function bgChanger(id) {
     document.getElementById(id).style.backgroundColor = "lightblue";
+}
+
+function sendPuan(testAnswers,){
+      xhr.open("post", "/puan", true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify(testAnswers));
+    console.log(JSON.stringify(testAnswers))
+  //  window.location.href = "puan"
 }
