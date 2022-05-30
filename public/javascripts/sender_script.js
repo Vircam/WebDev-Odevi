@@ -122,5 +122,4 @@ function sendPuan(testAnswers,){
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send(JSON.stringify(testAnswers));
     console.log(JSON.stringify(testAnswers))
-  //  window.location.href = "puan"
 }

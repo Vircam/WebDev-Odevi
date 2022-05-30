@@ -6,12 +6,18 @@ router.get('/', function(req, res) {
   if(req.session.userId){
    return  res.render("index",{
       title: 'Registration Page',
-      name: '',
+      name: req.session.userName,
       email: '',
       password: ''
   });
  }
  res.redirect("/login");
 });
+
+router.post('/',function (req, res) {
+    req.session.destroy()
+    req.session.userId=null;
+    res.redirect("/login");
+})
 
 module.exports = router;

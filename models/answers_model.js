@@ -18,7 +18,10 @@ answersTable = mongoose.model('answer', answersSchema, 'answers');
 module.exports = {
     fetchData: function (testid, callback) {
         answersTable.find({}, {}, {}, (err, res) => {
-            if (err) throw err;
+            if (err) {
+                console.log(err)
+                return callback(err)
+            }
             return callback(res);
         });
     }

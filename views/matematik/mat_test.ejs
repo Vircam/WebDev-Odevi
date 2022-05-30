@@ -97,7 +97,7 @@
     <input type="number" value='<%= matSoru.test_answers.soru3 %>' name="guestion3" id="question3"
            onchange="bgChanger('q3')">
     <p id="soru4"><b>Soru 4: </b>Aşağıdaki tablodaki rakamları birer kez kullanılarak, okunuşları verilen sayılardan
-        <b>kaç tanesi oluşturulabilir <%= matSoru.test_answers.soru1 %></b>?
+        <b>kaç tanesi oluşturulabilir</b>?
     </p>
     <table class="table table-success table-striped" style="width:auto;">
         <tr>
@@ -111,7 +111,7 @@
         </tr>
     </table>
     <ol type="I">
-        <li>Üç yüz altı bir dört yüz on bir</li>
+        <li>Üç yüz altı bin dört yüz on bir</li>
         <li>Altı yüz dört bin üç yüz yetmiş bir</li>
         <li>Üç yüz dört bin yedi yüz on altı</li>
         <li>Üç yüz dört bin yedi yüz altı</li>
@@ -206,11 +206,11 @@
 </div>
 <div class="parent">
     <a href="#" class="btn btn-dark"
-       role="button" <%= parseInt(matSoru.test_baslangic) - parseInt(matSoru.test_bitis) > 0 ? 'hidden' : '' %>
+       role="button" <%= matSoru.is_test_done ? 'hidden' : '' %>
        onclick="uyari('<%= matSoru.test_baslangic %>','<%= matSoru.test_bitis %>','/mattest','<%= matSoru._id %>','mat')">Sınavı
         Bitir</a>
-    <a href="#" class="btn btn-dark"
-       role="button" <%= parseInt(matSoru.test_baslangic) - parseInt(matSoru.test_bitis) < 0 ? 'hidden' : '' %>
+    <a href="puan" class="btn btn-dark"
+       role="button" <%= matSoru.is_test_done ? '' : 'hidden' %>
        onclick="f()"> Puan Tablosu</a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

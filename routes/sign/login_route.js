@@ -33,6 +33,7 @@ router.post("/", function (req, res) {
 
         if(user.user_mail===email && user.user_pass===password){
                 req.session.userId = user._id;
+                req.session.userName = user.user_name;
                 console.log(req.session.userId);
                 res.redirect("/index");
             }

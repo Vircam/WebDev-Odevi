@@ -14,6 +14,9 @@
     <script src="/javascripts/sender_script.js" type="text/javascript">
     </script>
     <script>
+        function f() {
+            sendPuan(<%- JSON.stringify(sorular)%>)
+        }
         countDownTimer('<%= engSoru.test_baslangic%>','<%= engSoru.test_bitis%>',"/engtest",'<%= engSoru._id%>','<%= engSoru.is_test_done%>',"eng");
     </script>
     <link rel="stylesheet" href="/stylesheets/style.css">
@@ -73,7 +76,7 @@
     <div>
         <p id="question1"><b>Question 1: </b>Which is not a right thing to do in classroom?</p>
         <select class="form-control" style="width:auto; display: inline;" name="" id="q1" onchange="bgChanger('lq1')">
-            <option hidden disabled selected value>--select an option--</option>
+            <option hidden disabled selected value>--select--</option>
             <option <%- engSoru.test_answers.soru1==='a' ? 'selected' : '' %> value="a">Listen to your teacher.</option>
             <option <%- engSoru.test_answers.soru1==='b' ? 'selected' : '' %> value="b">Raise your hand to speak.</option>
             <option <%- engSoru.test_answers.soru1==='c' ? 'selected' : '' %> value="c">Eating in the classroom.</option>
@@ -84,7 +87,7 @@
         <p id="question2"><b>Question 2: </b>Fill in the blank.</p>
         <p>May I read your <select class="form-control" style="width:auto; display: inline;" name="" id="q2"
                                    onchange="bgChanger('lq2')">
-                <option   hidden disabled selected value>--select an option--</option>
+                <option   hidden disabled selected value>--select--</option>
                 <option <%- engSoru.test_answers.soru2==='a' ? 'selected' : '' %> value="a" >sandwich</option>
                 <option <%- engSoru.test_answers.soru2==='b' ? 'selected' : '' %> value="b">bicycle</option>
                 <option <%- engSoru.test_answers.soru2==='c' ? 'selected' : '' %> value="c">book</option>
@@ -95,7 +98,7 @@
     <p id="question3"><b>Question 3: </b>Match the number.</p>
     <p>thirty-three <select class="form-control" style="width:auto; display: inline;" name="" id="q3"
                             onchange="bgChanger('lq3')">
-            <option   hidden disabled selected value>--select an option--</option>
+            <option   hidden disabled selected value>--select--</option>
             <option <%- engSoru.test_answers.soru3==='a' ? 'selected' : '' %> value="a">13</option>
             <option <%- engSoru.test_answers.soru3==='b' ? 'selected' : '' %> value="b">33</option>
             <option <%- engSoru.test_answers.soru3==='c' ? 'selected' : '' %> value="c">32</option>
@@ -104,7 +107,7 @@
     <p id="question4"><b>Question 4: </b>Read and select the correct word.</p>
     <p>Hi, <select class="form-control" style="width:auto; display: inline;" name="" id="q4"
                    onchange="bgChanger('lq4')">
-            <option   hidden disabled selected value>--select an option--</option>
+            <option   hidden disabled selected value>--select--</option>
             <option <%- engSoru.test_answers.soru4==='a' ? 'selected' : '' %> value="a">her</option>
             <option <%- engSoru.test_answers.soru4==='b' ? 'selected' : '' %> value="b">my</option>
             <option <%- engSoru.test_answers.soru4==='c' ? 'selected' : '' %> value="c">your</option>
@@ -114,7 +117,7 @@
     <p id="question5"><b>Question 5: </b>Read and select the correct word.</p>
     <p>Birds can <select class="form-control" style="width:auto; display: inline;" name="" id="q5"
                          onchange="bgChanger('lq5')">
-            <option   hidden disabled selected value>--select an option--</option>
+            <option   hidden disabled selected value>--select--</option>
             <option <%- engSoru.test_answers.soru5==='a' ? 'selected' : '' %> value="a">fly</option>
             <option <%- engSoru.test_answers.soru5==='b' ? 'selected' : '' %> value="b">swim</option>
             <option <%- engSoru.test_answers.soru5==='c' ? 'selected' : '' %> value="c">paint</option>
@@ -179,12 +182,12 @@
 </div>
 <div class="parent">
 
-    <a href="#" class="btn btn-dark" role="button"<%= parseInt(engSoru.test_baslangic)-parseInt(engSoru.test_bitis)>0?'hidden':''%>
+    <a href="puan" class="btn btn-dark" role="button"  <%= engSoru.is_test_done ? 'hidden' : '' %>
        onclick="uyari('<%= engSoru.test_baslangic %>','<%= engSoru.test_bitis %>','/engtest','<%= engSoru._id %>','eng')">Finish
         the Exam</a>
     
-    <a href="#" class="btn btn-dark" role="button"  <%= parseInt(engSoru.test_baslangic)-parseInt(engSoru.test_bitis)<0?'hidden':''%>
-       onclick="uyari('<%= engSoru.test_baslangic %>','<%= engSoru.test_bitis %>','/engtest','<%= engSoru._id %>','eng')">Table
+    <a href="puan" class="btn btn-dark" role="button"   <%= engSoru.is_test_done ? '' : 'hidden' %>
+       onclick="f()">Table
         of Point</a>
 
 </div>

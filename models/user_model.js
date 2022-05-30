@@ -98,7 +98,9 @@ module.exports = {
 
     signIn: function (user_mail, user_pass, callback) {
         userTable.findOne({"user_mail": user_mail, 'user_pass': user_pass}, (error, result) => {
-            if (error) throw error;
+            if (error) {
+                return callback(error)
+            }
             return callback(result);
         });
     },
@@ -138,7 +140,9 @@ module.exports = {
 
     deleteData: function (callback) {
         userTable.deleteOne({user_mail: "huzeyfedinc@gmail.com"}, {}, (err, data) => {
-            if (err) throw err;
+            if (err) {
+                return callback(error)
+            }
             return callback(data);
         });
 

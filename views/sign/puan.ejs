@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    console.log(<% data%>);
-</script>
 <head>
     <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,22 +61,18 @@
             <tr>
                 <th>Sınav Sonuçları</th>
                 <td>Puan</td>
-                <td>Kalan Süre</td>
             </tr>
             <tr>
                 <th>Matematik</th>
-                <td id="matSonuc">--</td>
-                <td id="matSüre">--</td>
+                <td id="matSonuc"><%= mat%></td>
             </tr>
             <tr>
                 <th>Fen Bilimleri</th>
-                <td id="fenSonuc">--</td>
-                <td id="fenSüre">--</td>
+                <td id="fenSonuc"><%= fen%></td>
             </tr>
             <tr>
                 <th>English</th>
-                <td id="engSonuc">--</td>
-                <td id="engSüre">--</td>
+                <td id="engSonuc"><%= eng%></td>
             </tr>
         </table>
     </div>
