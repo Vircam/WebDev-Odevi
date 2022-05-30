@@ -89,3 +89,7 @@ filter: brightness(30%);
 a{
 font-weight: bold;
 }
+
+.btn-sq {
+  aspect-ratio: 1.5;
+}

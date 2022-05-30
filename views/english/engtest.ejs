@@ -21,6 +21,13 @@
     </script>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="icon" href="images/mat_images/rainbow.png">
+    <script>
+        function logout(){
+            xhr.open("post", "index", true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send();
+        }
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -62,9 +69,13 @@
                 <li><a class="dropdown-item" href="engtest">English Exam</a></li>
             </ul>
         </div>
-        <div>
-            <button type="button" class="btn btn-warning">Kayıt Ol</button>
-            <button type="button" class="btn btn-success">Giriş Yap</button>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <%= name%>
+            </button>
+            <ul class="dropdown-menu bg-danger" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item bg-danger" href="login" onclick="logout()">Çıkış Yap</a></li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -166,19 +177,31 @@
     </select>
 </div>
 <div class="sidebar">
-    <ul class="verticalCenter">
-        <p id="timer"></p>
-        <li id="lq1"><a href="#question1">Question 1</a></li>
-        <li id="lq2"><a href="#question2">Question 2</a></li>
-        <li id="lq3"><a href="#question3">Question 3</a></li>
-        <li id="lq4"><a href="#question4">Question 4</a></li>
-        <li id="lq5"><a href="#question5">Question 5</a></li>
-        <li id="lq6"><a href="#question6">Question 6</a></li>
-        <li id="lq7"><a href="#question7">Question 7</a></li>
-        <li id="lq8"><a href="#question8">Question 8</a></li>
-        <li id="lq9"><a href="#question9">Question 9</a></li>
-        <li id="lq10"><a href="#question10">Question 10</a></li>
-    </ul>
+    <div class="btn-group-vertical ml-4 mt-4 verticalCenter" role="group" aria-label="Basic example">
+        <div class="">
+            <p id="timer"></p>
+        </div>
+        <div class="btn-group">
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question1">1</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question2">2</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question3">3</a>
+        </div>
+        <div class="btn-group">
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question4">4</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question5">5</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question6">6</a>
+        </div>
+        <div class="btn-group">
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question7">7</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question8">8</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question9">9</a>
+        </div>
+        <div class="btn-group">
+            <a type="button" class="btn btn-sq btn-outline-light disabled py-3"></a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#question10">10</a>
+            <a type="button" class="btn btn-sq btn-outline-light disabled py-3"></a>
+        </div>
+    </div>
 </div>
 <div class="parent">
 

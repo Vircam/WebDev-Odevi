@@ -19,6 +19,13 @@
     <script>
         countDownTimer('<%= fenSoru.test_baslangic%>','<%= fenSoru.test_bitis%>',"/fentest",'<%= fenSoru._id%>','<%= fenSoru.is_test_done%>',"fen");
     </script>
+    <script>
+        function logout(){
+            xhr.open("post", "index", true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send();
+        }
+    </script>
 </head>
 
 <body>
@@ -58,13 +65,185 @@
                   <li><a class="dropdown-item" href="engtest">English Exam</a></li>
                 </ul>
             </div>
-            <div>
-                <button type="button" class="btn btn-warning">Kayıt Ol</button>
-                <button type="button" class="btn btn-success">Giriş Yap</button>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <%= name%>
+                </button>
+                <ul class="dropdown-menu bg-danger" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item bg-danger" href="login" onclick="logout()">Çıkış Yap</a></li>
+                </ul>
             </div>
         </div>
     </nav>
-    <p id="timer"></p>
+    <h1 class="center">Fen Bilimleri Sınavı</h1>
+    <div class="child" onclick="sendAnswersFen()">
+        <div>
+            <p id="soru1"><b>Soru 1: </b>Aşağıdaki cümlelerdeki boş bırakılan yerler doldurulduğunda <b>aşağıdaki verilenlerden hangisi dışarıda kalır?</b></p>
+            <ul class="">
+                <li>Dünya'nın kendi ekseni etrafındaki <b>___</b> hareketi gece ve gündüzü oluşturur.</li>
+                <li><b>___</b> Dünya'nın ısı ve ışık kaynağıdır.</li>
+                <li>Dünya'nın Güneş'in çevresinde dolanımı sonucu <b>___</b> oluşur.</li>
+            </ul>
+            <select class="form-control" id="q1" style="width: auto">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">Dönme</option>
+                <option value="b">Güneş</option>
+                <option value="c">Mevsimler</option>
+                <option value="d">Ay</option>
+            </select>
+        </div>
+        <div>
+            <p id="soru2"><b>Soru 2: </b>Aşağıdakilerden hangisi besin içeriği yönüyle diğerlerinden farklıdır?</p>
+            <ul>
+                <li>Et</li>
+                <li>Süt</li>
+                <li>Yumurta</li>
+                <li>Ekmek</li>
+            </ul>
+            <select class="form-control" id="q2" style="width: auto">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">Et</option>
+                <option value="b">Süt</option>
+                <option value="c">Yumurta</option>
+                <option value="d">Ekmek</option>
+            </select>
+        </div>
+        <div>
+            <p id="soru3"><b>Soru 3: </b>Aşağıda verilen parantezler <b>doğru-yanlış</b> olarak işaretlenmesi istenmektedir. <b>Buna göre aşağıdaki şıklardan hangisi doğrudur?</b></p>
+            <ul>
+                <li>() Yer kabuğu kayaçlardan oluşur.</li>
+                <li>() Ekonomik değeri olan kayaçlara mineral denir.</li>
+                <li>() Fosillerin oluşumu kısa sürer.</li>
+            </ul>
+            <select class="form-control" id="q3" style="width:auto;">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">D-Y-D</option>
+                <option value="b">D-Y-Y</option>
+                <option value="c">Y-D-D</option>
+                <option value="d">Y-D-Y</option>
+            </select>
+        </div>
+        <div>
+            <p id="soru4"><b>Soru 4: </b>Aşağıda cümlelerdeki boş bırakılan yerlere <b>sırasıyla hangi sözcükler gelmelidir?</b></p>
+            <ul>
+                <li><b>___</b> ve gümüş takı yapımında kullanılır.</li>
+                <li>Kayaçların rengini ve yapısını <b>___</b> belirler.</li>
+                <li>Milyonlarca yıl önce yaşamış canlıların günümüze kadar gelmiş kalıntılarına <b>___</b> denir.</li>
+            </ul>
+            <select class="form-control" id="q4" style="width: auto">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">Altın - Mineraller - Fosil</option>
+                <option value="b">Bor - Mineraller - Fosil</option>
+                <option value="c">Altın - Mineraller - Kayaç</option>
+                <option value="d">Bor - Vitaminler - Kayaç</option>
+            </select>
+        </div>
+        <div>
+            <p id="soru5"><b>Soru 5: </b>Aşağıda fosille ilgili verilen ifadelerden hangisi <b>yanlıştır?</b></p>
+            <select class="form-control" id="q5" style="width: auto">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">Fosiller kayaç tabakasının içinde oluşur.</option>
+                <option value="b">Fosiller milyonlarca yıl içinde oluşur.</option>
+                <option value="c">Bitki ve hayvan kalıntıları uygun şartlar oluşursa fosilleşir.</option>
+                <option value="d">Ölen her canlı fosildir.</option>
+            </select>
+        </div>
+        <div>
+            <p id="soru6"><b>Soru 6: </b>Aşağıdakilerden hangisi Dünya' nın kendi etrafında dönmesinin sonucu <b>değildir?</b></p>
+            <select class="form-control" id="" style="width: auto">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">Mevsimler</option>
+                <option value="b">Günlük sıcaklık farkları</option>
+                <option value="c">Gece - gündüz</option>
+                <option value="d">Gölge boylarının değişmesi</option>
+            </select>
+        </div>
+        <div>
+            <p id="soru7"><b>Soru 7: </b>Aşağıda verilen noktalı yerler ve parantezlere gelebilecek uygun ifade sırasıyla aşağıda hangi şıkta doğru verilmiştir?</p>
+            <ul>
+                <li>Aynı kutupları birbirine yaklaştırılan mıknatısları birbrini <b>___</b></li>
+                <li>Zıt kutupları birbirine yaklaştırılan iki mıknatıs birbirini <b>___</b></li>
+                <li>( ) Bir mıknatıs iki parçaya bölündüğünde bir yarısı kuzey diğer yarısı güney kutuplarına ayrılır.</li>
+                <li>( ) Mıknatıslar bazı elektronik eşyalardan uzak tutulmalıdır.</li>
+            </ul>
+            <select class="form-control" id="q7" style="width: auto">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">Çeker / Çeker / D / D</option>
+                <option value="b">İter / İter / Y / Y</option>
+                <option value="c">İter / Çeker / Y / D</option>
+                <option value="d">Çeker / İter / D / Y</option>
+            </select>
+        </div>
+        <div>
+            <p id="soru8"><b>Soru 8: </b>Elektrik üretiminde, ısınmada, bazı endüstri tesislerinde, kimya ve ilaç fabrikalarında kullanılan madenin <b>adı nedir?</b></p>
+            <select class="form-control" id="q8" style="width: auto;">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">Bakır</option>
+                <option value="b">Demir</option>
+                <option value="c">Nikel</option>
+                <option value="d">Kömür</option>
+            </select>
+        </div>
+        <div>
+            <p id="soru9"><b>Soru 9: </b>Aşağıda açıklaması verilen kavram aşağıdakilerden hangisidir?</p>
+            <p>-Vücudumuzda yapıcı ve onarıcı olarak görev yapan besinlerdir. Vücudun büyüyüp gelişmesini, yaraların iyileşmesini, saç ve tırnakların uzamasını sağlayan besinlerdir.</p>
+            <select class="form-control" id="q9" style="width: auto">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">Karbonhidratlar</option>
+                <option value="b">Vitaminler</option>
+                <option value="c">Proteinler</option>
+                <option value="d">Yağlar</option>
+            </select>
+        </div>
+        <div>
+            <p id="soru10"><b>Soru 10: </b>Toprağın oluşumundaki <b>doğru sıralama</b> aşağıdakilerden hangisidir?</p>
+            <select class="form-control" id="q10" style="width: auto;">
+                <option hidden disabled selected value>--bir şıkkı seçiniz--</option>
+                <option value="a">Kaya - Çakıl - Kayaç - Taş - Toprak</option>
+                <option value="b">Taş - Çakıl - Kaya - Kayaç - Toprak</option>
+                <option value="c">Kayaç - Taş - Kaya - Çakıl - Toprak</option>
+                <option value="d">Kayaç - Kaya - Taş - Çakıl - Toprak</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="btn-group-vertical ml-4 mt-4 verticalCenter" role="group" aria-label="Basic example">
+            <div class="">
+                <p id="timer"></p>
+            </div>
+            <div class="btn-group">
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru1">1</a>
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru2">2</a>
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru3">3</a>
+            </div>
+            <div class="btn-group">
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru4">4</a>
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru5">5</a>
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru6">6</a>
+            </div>
+            <div class="btn-group">
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru7">7</a>
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru8">8</a>
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru9">9</a>
+            </div>
+            <div class="btn-group">
+                <a type="button" class="btn btn-sq btn-outline-light disabled py-3"></a>
+                <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru10">10</a>
+                <a type="button" class="btn btn-sq btn-outline-light disabled py-3"></a>
+            </div>
+        </div>
+    </div>
+    <div class="parent">
+        <!--SUBMIT-->
+        <a href="#" class="btn btn-dark"
+           role="button" <%= fenSoru.is_test_done ? 'hidden' : '' %>
+           onclick="uyari('<%= fenSoru.test_baslangic %>','<%= fenSoru.test_bitis %>','/fentest','<%= fenSoru._id %>','fen')">Sınavı
+            Bitir</a>
+        <a href="puan" class="btn btn-dark"
+           role="button" <%= fenSoru.is_test_done ? '' : 'hidden' %>
+           onclick="f()"> Puan Tablosu</a>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

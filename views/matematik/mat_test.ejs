@@ -13,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="icon" href="mat_images/rainbow.png">
+    <link rel="icon" href="images/mat_images/rainbow.png">
     <script src="/javascripts/mat_test.js" type="text/javascript"></script>
     <script src="/javascripts/sender_script.js" type="text/javascript"></script>
     <script>
@@ -22,7 +22,13 @@
         }
         countDownTimer('<%= matSoru.test_baslangic %>', '<%= matSoru.test_bitis %>', "/mattest", '<%= matSoru._id %>', '<%= matSoru.is_test_done %>', "mat");
     </script>
-
+    <script>
+        function logout(){
+            xhr.open("post", "index", true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send();
+        }
+    </script>
 </head>
 
 <body>
@@ -65,9 +71,13 @@
                 <li><a class="dropdown-item" href="engtest">English Exam</a></li>
             </ul>
         </div>
-        <div>
-            <button type="button" class="btn btn-warning">Kayıt Ol</button>
-            <button type="button" class="btn btn-success">Giriş Yap</button>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <%= name%>
+            </button>
+            <ul class="dropdown-menu bg-danger" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item bg-danger" href="login" onclick="logout()">Çıkış Yap</a></li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -168,7 +178,7 @@
             sayı</b> kaçtır?</p>
     <select class="form-control" value='<%= matSoru.test_answers.soru9 %>' style="width:auto;"
             name="question9" id="question9" onchange="bgChanger('q9')">
-        <option hidden disabled value> -- bir şıkkı seçiniz --</option>
+        <option hidden disabled selected value> -- bir şıkkı seçiniz --</option>
         <option value="68" <%- matSoru.test_answers.soru9 === '68' ? 'selected' : '' %>>68</option>
         <option value="69" <%- matSoru.test_answers.soru9 === '69' ? 'selected' : '' %>>69</option>
         <option value="78" <%- matSoru.test_answers.soru9 === '78' ? 'selected' : '' %>>78</option>
@@ -178,7 +188,7 @@
         hangisidir?</p>
     <select class="form-control" value='<%= matSoru.test_answers.soru10 %>' style="width:auto;"
             name="question10" id="question10" onchange="bgChanger('q10')">
-        <option hidden disabled value> -- bir şıkkı seçiniz --</option>
+        <option hidden disabled selected value> -- bir şıkkı seçiniz --</option>
         <option value="870305" <%- matSoru.test_answers.soru10 === '870305' ? 'selected' : '' %> >870305
         </option>
         <option value="870350" <%- matSoru.test_answers.soru10 === '870350' ? 'selected' : '' %>>870350
@@ -190,19 +200,31 @@
     </select>
 </div>
 <div class="sidebar">
-    <ul class="verticalCenter">
-        <p id="timer"></p>
-        <li id="q1"><a href="#soru1">Soru 1 </a></li>
-        <li id="q2"><a href="#soru2">Soru 2</a></li>
-        <li id="q3"><a href="#soru3">Soru 3</a></li>
-        <li id="q4"><a href="#soru4">Soru 4</a></li>
-        <li id="q5"><a href="#soru5">Soru 5</a></li>
-        <li id="q6"><a href="#soru6">Soru 6</a></li>
-        <li id="q7"><a href="#soru7">Soru 7</a></li>
-        <li id="q8"><a href="#soru8">Soru 8</a></li>
-        <li id="q9"><a href="#soru9">Soru 9</a></li>
-        <li id="q10"><a href="#soru10">Soru 10</a></li>
-    </ul>
+    <div class="btn-group-vertical ml-4 mt-4 verticalCenter" role="group" aria-label="Basic example">
+        <div class="">
+            <p id="timer"></p>
+        </div>
+        <div class="btn-group">
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru1">1</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru2">2</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru3">3</a>
+        </div>
+        <div class="btn-group">
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru4">4</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru5">5</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru6">6</a>
+        </div>
+        <div class="btn-group">
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru7">7</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru8">8</a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru9">9</a>
+        </div>
+        <div class="btn-group">
+            <a type="button" class="btn btn-sq btn-outline-light disabled py-3"></a>
+            <a type="button" class="btn btn-sq btn-outline-primary py-3" href="#soru10">10</a>
+            <a type="button" class="btn btn-sq btn-outline-light disabled py-3"></a>
+        </div>
+    </div>
 </div>
 <div class="parent">
     <a href="#" class="btn btn-dark"

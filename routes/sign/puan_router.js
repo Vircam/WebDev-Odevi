@@ -4,7 +4,7 @@ const router = express.Router();
 let matPuan = 0, fenPuan = 0, engPuan = 0;
 
 router.get('/', function (req, res, next) {
-    return res.render('sign/puan', {title: 'Express',eng:engPuan, fen:fenPuan, mat:matPuan});
+    return res.render('sign/puan', {title: 'Express',name: req.session.userName, eng:engPuan, fen:fenPuan, mat:matPuan});
 
 
 });

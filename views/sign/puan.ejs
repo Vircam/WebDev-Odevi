@@ -10,6 +10,13 @@
         <link rel="icon" href="images/mat_images/rainbow.png">
     <script src="/javascripts/mat_test.js" type="text/javascript"></script>
     <script src="/javascripts/sender_script.js" type="text/javascript"></script>
+    <script>
+        function logout(){
+            xhr.open("post", "index", true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send();
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -41,18 +48,19 @@
                   English
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="English-1.html">Unit-1 Classroom Rules</a></li>
-                  <li><a class="dropdown-item" href="English-2.html">Unit-2 Nationality</a></li>
-                  <li><a class="dropdown-item" href="English-3.html">Unit-3 Cartoon Characters</a></li>
-                  <li><a class="dropdown-item" href="EnglishTest.html">English Exam</a></li>
+                  <li><a class="dropdown-item" href="eng1">Unit-1 Classroom Rules</a></li>
+                  <li><a class="dropdown-item" href="eng2">Unit-2 Nationality</a></li>
+                  <li><a class="dropdown-item" href="eng3">Unit-3 Cartoon Characters</a></li>
+                  <li><a class="dropdown-item" href="engtest">English Exam</a></li>
                 </ul>
             </div>
-            <div>
-                <a href="puan" class="btn btn-primary" role="button">Sınav Sonuçları</a>
-            </div>
-            <div>
-                <button type="button" class="btn btn-warning">Kayıt Ol</button>
-                <button type="button" class="btn btn-success">Giriş Yap</button>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <%= name%>
+                </button>
+                <ul class="dropdown-menu bg-danger" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item bg-danger" href="login" onclick="logout()">Çıkış Yap</a></li>
+                </ul>
             </div>
         </div>
     </nav>

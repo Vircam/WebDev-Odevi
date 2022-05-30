@@ -5,7 +5,7 @@ var userData = require('../../models/user_model')
 router.get('/', function (req, res, next) {
     userData.fetchData(req.session.userId, function (data) {
         console.log(data)
-        return res.render('english/engtest', {title: 'Express', sorular: data});
+        return res.render('english/engtest', {title: 'Express',name: req.session.userName, sorular: data});
     })
 
 });
