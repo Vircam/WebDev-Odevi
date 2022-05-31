@@ -96,7 +96,8 @@ font-weight: bold;
   aspect-ratio: 1.5;
 }
 
-.flaotTop{
+#floatTop{
   !important;float: top;
   !important;position: fixed;
+  !important;width:100%;
 }
