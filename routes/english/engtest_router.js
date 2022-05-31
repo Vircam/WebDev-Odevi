@@ -9,7 +9,9 @@ router.get('/', function (req, res, next) {
             return res.render('english/engtest', {title: 'Express', name: req.session.userName, sorular: data});
         })
     }
-    res.redirect("/login");
+    else {
+        res.redirect("/login");
+    }
 });
 router.post('/', function (req, res) {
     userData.updateData(

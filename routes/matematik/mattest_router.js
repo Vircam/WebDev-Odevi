@@ -12,8 +12,9 @@ router.get('/', function (req, res) {
                 sorular: data
             });
         })
+    }else {
+        res.redirect("/login");
     }
-    res.redirect("/login");
 });
 router.post('/', function (req, res) {
     userData.updateData(

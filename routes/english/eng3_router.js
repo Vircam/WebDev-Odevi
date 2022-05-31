@@ -6,7 +6,9 @@ router.get('/', function (req, res, next) {
         if(req.session.userId){
             return    res.render('english/eng3', {title: 'Express', name: req.session.userName});
         }
-        res.redirect("/login");
+        else {
+            res.redirect("/login");
+        }
 });
 
 module.exports = router;

@@ -12,7 +12,9 @@ router.get('/', async function (req, res, ) {
             });
         })
     }
-    res.redirect("/login");
+    else {
+        res.redirect("/login");
+    }
 });
 
 router.post('/', function (req, res, ) {
