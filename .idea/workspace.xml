@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4094367-acb9-47be-9bb2-b90e10e8aec8" name="Changes" comment="logout - fentest">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/fen_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/fen_test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/english/eng1_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/english/eng1_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/english/eng2_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/english/eng2_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/english/eng3_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/english/eng3_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/english/engtest_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/english/engtest_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/fenbilgisi/fen1_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fenbilgisi/fen1_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/fenbilgisi/fen2_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fenbilgisi/fen2_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/fenbilgisi/fen3_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fenbilgisi/fen3_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/fenbilgisi/fentest_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/fenbilgisi/fentest_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/matematik/mat1_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/matematik/mat1_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/matematik/mat2_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/matematik/mat2_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/matematik/mat3_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/matematik/mat3_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/matematik/mattest_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/matematik/mattest_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/sign/puan_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/sign/puan_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/english/eng1.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/english/eng1.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/english/eng2.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/english/eng2.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/english/eng3.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/english/eng3.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/english/engtest.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/english/engtest.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fen_bilgisi/fen_1.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fen_bilgisi/fen_1.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fen_bilgisi/fen_2.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fen_bilgisi/fen_2.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fen_bilgisi/fen_3.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fen_bilgisi/fen_3.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fen_bilgisi/fen_test.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fen_bilgisi/fen_test.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/matematik/mat1.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/matematik/mat1.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/matematik/mat2.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/matematik/mat2.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/matematik/mat3.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/matematik/mat3.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/matematik/mat_test.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/matematik/mat_test.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/sign/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/sign/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/sign/puan.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/sign/puan.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/sign/register.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/sign/register.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="a4094367-acb9-47be-9bb2-b90e10e8aec8" name="Changes" comment="logout - fentest" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,7 +118,7 @@
       <workItem from="1653741401251" duration="1206000" />
       <workItem from="1653896044141" duration="5106000" />
       <workItem from="1653909865759" duration="87000" />
-      <workItem from="1653909970198" duration="22907000" />
+      <workItem from="1653909970198" duration="23155000" />
     </task>
     <task id="LOCAL-00001" summary="db">
       <created>1653122405486</created>
@@ -201,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653919926642</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="logout - fentest">
+      <created>1653938173281</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653938173281</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
