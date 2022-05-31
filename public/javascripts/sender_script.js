@@ -69,7 +69,7 @@ function countDownTimer(baslangicTime, bitisTime, path, id, isDone, which) {
         }else if(which == "mat"){
             value = sendAnswersMat();
         }
-        document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s ";
+        document.getElementById("timer").innerHTML = minutes + ":" + seconds;
         if (seconds % 5 === 0) {
             post(path, {
                 id: id,
