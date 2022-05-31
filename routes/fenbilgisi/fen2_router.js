@@ -4,7 +4,7 @@ const router = express.Router();
 /* GET home page. */
 router.get('/', function (req, res, next) {
         if(req.session.userId){
-                res.render('fen_bilgisi/fen_2', {title: 'Express', name: req.session.userName});
+               return res.render('fen_bilgisi/fen_2', {title: 'Express', name: req.session.userName});
         }
         res.redirect("/login");
 });

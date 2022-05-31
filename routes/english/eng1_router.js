@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/', function (req, res, next) {
   if(req.session.userId){
-    res.render('english/eng1', {title: 'Express', name: req.session.userName});
+    return res.render('english/eng1', {title: 'Express', name: req.session.userName});
   }
   res.redirect("/login");
 });
