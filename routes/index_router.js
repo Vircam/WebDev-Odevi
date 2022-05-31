@@ -11,7 +11,9 @@ router.get('/', function(req, res) {
       password: ''
   });
  }
- res.redirect("/login");
+  else {
+      res.redirect("/login");
+  }
 });
 
 router.post('/',function (req, res) {
