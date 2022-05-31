@@ -48,7 +48,9 @@ font-weight: bold;
 .sidebar{
 display: flex;
 float: right;
-height:100vh
+height:100vh;
+  border-left: 1px;
+  border-color: black;
 }
 
 .verticalCenter{
@@ -92,4 +94,9 @@ font-weight: bold;
 
 .btn-sq {
   aspect-ratio: 1.5;
+}
+
+.flaotTop{
+  !important;float: top;
+  !important;position: fixed;
 }

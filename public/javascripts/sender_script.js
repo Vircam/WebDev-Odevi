@@ -1,5 +1,5 @@
 function uyari(baslangicTime, bitisTime, path, id, which) {
-    let countDownDate = new Date().getTime() + 30 * 60000;
+    let countDownDate = new Date().getTime() +  60000;
     if (baslangicTime == 0) {
         baslangicTime = new Date().getTime()
     } else if (baslangicTime < new Date().getTime()) {
@@ -50,7 +50,7 @@ function countDownTimer(baslangicTime, bitisTime, path, id, isDone, which) {
         console.log("test bitti")
         return;
     }
-    let countDownDate = new Date().getTime() + 30 * 60000;
+    let countDownDate = new Date().getTime()  + 60000;
     if (baslangicTime == 0) {
         baslangicTime = new Date().getTime()
     } else if (baslangicTime < new Date().getTime()) {
