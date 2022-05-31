@@ -2,9 +2,17 @@ var express = require('express');
 var userData = require('../../models/user_model')
 var router = express.Router();
 router.get('/', async function (req, res, ) {
-    userData.fetchData(req.session.userId,function (data) {
-       return res.render('fen_bilgisi/fen_test', {title: 'Fen Bilgisi Test Soruları',name: req.session.userName, sorular: data});
-    })
+
+    if(req.session.userId){
+        userData.fetchData(req.session.userId, function (data) {
+            return res.render('fen_bilgisi/fen_test', {
+                title: 'Fen Bilgisi Test Soruları',
+                name: req.session.userName,
+                sorular: data
+            });
+        })
+    }
+    res.redirect("/login");
 });
 
 router.post('/', function (req, res, ) {

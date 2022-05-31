@@ -121,5 +121,8 @@ function sendPuan(testAnswers,){
       xhr.open("post", "/puan", true);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send(JSON.stringify(testAnswers));
+    window.setTimeout(function() {
+        window.location.href = 'puan';
+    }, 5000);
     console.log(JSON.stringify(testAnswers))
 }

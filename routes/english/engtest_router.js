@@ -3,11 +3,13 @@ const router = express.Router();
 var userData = require('../../models/user_model')
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    userData.fetchData(req.session.userId, function (data) {
-        console.log(data)
-        return res.render('english/engtest', {title: 'Express',name: req.session.userName, sorular: data});
-    })
-
+    if(req.session.userId){
+        userData.fetchData(req.session.userId, function (data) {
+            console.log(data)
+            return res.render('english/engtest', {title: 'Express', name: req.session.userName, sorular: data});
+        })
+    }
+    res.redirect("/login");
 });
 router.post('/', function (req, res) {
     userData.updateData(

@@ -3,7 +3,10 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('fen_bilgisi/fen_3', { title: 'Express',name: req.session.userName });
+  if(req.session.userId){
+    res.render('fen_bilgisi/fen_3', {title: 'Express', name: req.session.userName});
+  }
+  res.redirect("/login");
 });
 
 module.exports = router;

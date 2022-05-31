@@ -3,7 +3,10 @@ const router = express.Router();
 
 
 router.get('/', function (req, res, next) {
-  res.render('english/eng1', { title: 'Express',name: req.session.userName });
+  if(req.session.userId){
+    res.render('english/eng1', {title: 'Express', name: req.session.userName});
+  }
+  res.redirect("/login");
 });
 
 module.exports = router;
