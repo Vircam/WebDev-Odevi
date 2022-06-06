@@ -1,4 +1,4 @@
-# WebDev-Zafer
+# WebDev
 2021-2022 WebDev Dönem Ödevi
 
 -> first npm install
